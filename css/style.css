@@ -19,11 +19,15 @@ a:hover {
   color: #000000;
 }
 
+img {
+  width: 100%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .header-top {
@@ -179,8 +183,170 @@ body {
   visibility: visible;
   opacity: 1;
 }
-.banner img {
+
+.feature-style {
+  margin: 30px 0;
+}
+.feature-style .feature-item {
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.feature-style .feature-item .scale-effect {
+  transform: scale(1);
+  transition: 0.3s;
+}
+.feature-style .feature-item .scale-effect:hover {
+  transform: scale(1.1);
+}
+
+.best-seller-title {
+  position: relative;
+  margin: 30px 0;
+}
+.best-seller-title h3 {
+  display: inline-block;
+  position: relative;
+  padding-right: 30px;
+  background-color: #ffffff;
+  z-index: 99;
+  margin: 0;
+}
+.best-seller .custom-nav {
+  position: absolute;
+  top: 0;
+  margin-top: 0;
+  right: 0;
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 25px;
+  height: 32px;
+  z-index: 100;
+}
+.best-seller .custom-nav .owl-prev,
+.best-seller .custom-nav .owl-next {
+  border: none;
+  padding: 0 8px;
+  margin: 0;
+  background-color: transparent;
+}
+.best-seller .custom-nav .owl-prev:hover,
+.best-seller .custom-nav .owl-next:hover {
+  background-color: transparent;
+}
+.best-seller .custom-nav .owl-prev i,
+.best-seller .custom-nav .owl-next i {
+  color: #666;
+}
+.best-seller .box-tab {
+  position: absolute;
+  right: 0;
+  top: 50%;
   width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+}
+.best-seller .box-tab::after {
+  background: #f0f0f0;
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+.best-seller .tab-content {
+  margin-top: 20px;
+}
+.best-seller .tab-content .product-list {
+  margin-right: -1px;
+}
+.best-seller .tab-content .product-list .product-item {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.best-seller .tab-content .product-list .product-item:hover {
+  border-color: #23b55c;
+}
+.best-seller .tab-content .product-list .product-item:hover .product-caption .price-box {
+  transform: translateY(30px);
+  opacity: 0;
+}
+.best-seller .tab-content .product-list .product-item:hover .product-caption .btn-cart {
+  opacity: 1;
+}
+.best-seller .tab-content .product-list .product-item .product-thumb {
+  position: relative;
+}
+.best-seller .tab-content .product-list .product-item .product-caption {
+  position: relative;
+  padding: 22px 15px 26px;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .manufacture-product a {
+  color: #666;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .product-name a {
+  white-space: initial;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .product-name h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .product-name h4:hover {
+  color: #23b55c;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .price-box {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .price-box .old-price {
+  color: #666;
+  text-decoration: line-through;
+  font-size: 15px;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .price-box .regular-price {
+  font-weight: 600;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .btn-cart {
+  background: #23b55c;
+  border: medium none;
+  border-radius: 25px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 36px;
+  margin-top: 10px;
+  padding: 0 25px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+}
+.best-seller .tab-content .product-list .product-item .product-caption .btn-cart:hover {
+  background: #000000;
+}
+
+.banner-statics .single-banner-statics {
+  transition: 0.3s;
+}
+.banner-statics .single-banner-statics:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=style.css.map */

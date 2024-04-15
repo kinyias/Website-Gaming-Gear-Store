@@ -17,11 +17,13 @@ a{
     color: #000000;
   }
 }
+img{
+  width: 100%;
+}
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-style: normal;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-@import './component/header';
-@import './component/banner'
+@import './pages/home'
