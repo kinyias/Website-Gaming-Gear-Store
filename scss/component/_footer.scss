@@ -1,0 +1,90 @@
+.footer {
+  .newsletter-group {
+    background-color: $border-color;
+    padding: 36px 0;
+    .newsletter-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .newsletter-title {
+      padding: 10px 0;
+      h3 {
+        color: #111;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+      }
+      p {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+    .email-group{
+      display: flex;
+    }
+    .email-box {
+      background: #fff none repeat scroll 0 0;
+      border: medium none;
+      border-radius: 5px;
+      color: #a6a6a6;
+      font-size: 14px;
+      height: 56px;
+      padding: 0 15px;
+      position: relative;
+      vertical-align: middle;
+      width: 450px;
+      outline: none;
+    }
+    .btn-newsletter {
+      background-color: $primary-color;
+      border: medium none;
+      border-radius: 0 5px 5px 0;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 56px;
+      padding: 0 23px;
+      display: inline-block;
+      text-transform: capitalize;
+      transition: 0.3s;
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+  &-top {
+    padding: 50px 0;
+  }
+  .footer-logo {
+    img {
+      width: 45%;
+    }
+  }
+  .widget-title {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .widget-body {
+    font-size: 15px;
+  }
+  .link-list {
+    .link-item {
+      transition: 0.3s;
+      margin-bottom: 5px;
+      &:hover {
+        transform: translateX(10px);
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  &-copyright {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
