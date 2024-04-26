@@ -72,6 +72,40 @@
     display: flex;
     .categories{
       padding: 20px;
+      position: relative;
+      cursor: pointer;
+      background-color: $secondary-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        padding: 0 10px;
+      }
+      i{
+        display: flex;
+        font-size: 18px;
+      }
+      .categories-content{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+        display: none;
+        .categories-item{
+          a{
+            display: block;
+            padding: 10px 20px;
+            transition: .3s;
+            &:hover{
+              background-color: $primary-color;
+              color: #ffffff;
+            }
+          }
+        }
+      }
     }
     .menu{
       display: flex;
