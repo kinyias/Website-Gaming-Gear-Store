@@ -1,0 +1,39 @@
+@import '../component/header';
+@import '../component/footer';
+
+.contact {
+  background-color: #f6f6f6;
+  &-message {
+    font-weight: 500;
+    label {
+      width: 20%;
+    }
+    input {
+      width: 80%;
+      background: #fff;
+      border: medium none;
+      color: #838383;
+      padding: 10px;
+      outline: none;
+    }
+    textarea {
+      margin-top: 10px;
+      width: 100%;
+      background: #fff;
+      border: medium none;
+      color: #838383;
+      padding: 10px;
+      outline: none;
+    }
+    .btn-contact{
+        padding: 10px 20px;
+        margin: 10px;
+        color: #fff;
+        background-color: $secondary-color;
+        transition: .3s;
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+  }
+}

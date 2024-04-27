@@ -6,7 +6,8 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   animation: slideDown 0.35s ease-out;
@@ -68,6 +69,12 @@
     gap: 15px;
     .cart-info {
       position: relative;
+      width: 60%;
+    }
+    .login{
+      &:hover{
+        color: $primary-color;
+      }
     }
     .login,
     .cart {
@@ -278,7 +285,7 @@
         a {
           display: block;
           color: #ffffff;
-          padding: 20px 30px;
+          padding: 20px;
           text-transform: uppercase;
         }
       }
@@ -286,7 +293,7 @@
   }
 }
 
-.menu-bar {
+.menu-bar, .menu-close {
   display: none;
 }
 

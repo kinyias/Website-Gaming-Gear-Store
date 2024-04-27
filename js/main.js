@@ -100,70 +100,72 @@ function generateProductList(listProducts) {
   const productList = document.querySelector(
     '.product-list .owl-stage-outer .owl-stage'
   );
-  const listShow = listProducts.slice(0, 5);
-  listShow.forEach((item) => {
-    productList.innerHTML += `<div class="owl-item">
-    <div class="product-item">
-    <div class="product-thumb">
-    <a href="#">
-    <img
-    src="${item.img}"
-    alt="product-name"
-    />
-    </a>
-    </div>
-    <div class="product-caption">
-    <div class="manufacture-product">
-    <a href="#">${item.category}</a>
-    </div>
-    <div class="product-name">
-    <a href="#">
-    <h4>
-    ${item.name}
-    </h4>
-    </a>
-    </div>
-    <div class="price-box">
-          <span class="regular-price ${
-            item.price_old ? 'sale' : ''
-          }">${formatVND(item.price)}</span>
-          <span class="old-price">${
-            item.price_old ? formatVND(item.price_old) : ''
-          }</span>
+  if(productList){
+    const listShow = listProducts.slice(0, 5);
+    listShow.forEach((item) => {
+      productList.innerHTML += `<div class="owl-item">
+      <div class="product-item">
+      <div class="product-thumb">
+      <a href="#">
+      <img
+      src="${item.img}"
+      alt="product-name"
+      />
+      </a>
+      </div>
+      <div class="product-caption">
+      <div class="manufacture-product">
+      <a href="#">${item.category}</a>
+      </div>
+      <div class="product-name">
+      <a href="#">
+      <h4>
+      ${item.name}
+      </h4>
+      </a>
+      </div>
+      <div class="price-box">
+            <span class="regular-price ${
+              item.price_old ? 'sale' : ''
+            }">${formatVND(item.price)}</span>
+            <span class="old-price">${
+              item.price_old ? formatVND(item.price_old) : ''
+            }</span>
+            </div>
+            <button class="btn-cart" onclick="addToCart(${
+              item.id
+            })" type="button">
+            Thêm vào giỏ
+          </button>
           </div>
-          <button class="btn-cart" onclick="addToCart(${
-            item.id
-          })" type="button">
-          Thêm vào giỏ
-        </button>
-        </div>
-        </div>
-  </div>`;
-  });
-  $(document.querySelector('.product-list')).owlCarousel({
-    loop: true,
-    margin: 30,
-    singleItem: true,
-    items: 4,
-    dots: false,
-    nav: true,
-    navText: [
-      '<i class="bi bi-arrow-left"></i>',
-      '<i class="bi bi-arrow-right"></i>',
-    ],
-    navContainer: '.box-title .custom-nav-best-seller',
-    responsive: {
-      0: {
-        items: 2,
+          </div>
+    </div>`;
+    });
+    $(document.querySelector('.product-list')).owlCarousel({
+      loop: true,
+      margin: 30,
+      singleItem: true,
+      items: 4,
+      dots: false,
+      nav: true,
+      navText: [
+        '<i class="bi bi-arrow-left"></i>',
+        '<i class="bi bi-arrow-right"></i>',
+      ],
+      navContainer: '.box-title .custom-nav-best-seller',
+      responsive: {
+        0: {
+          items: 2,
+        },
+        600: {
+          items: 2,
+        },
+        1000: {
+          items: 4,
+        },
       },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 4,
-      },
-    },
-  });
+    });
+  }
 }
 
 function getProductById(id) {
