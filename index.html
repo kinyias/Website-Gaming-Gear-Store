@@ -33,11 +33,6 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-top">
-        <div class="container">
-          <img src="./images/banner-header.webp" alt="banner-header" />
-        </div>
-      </div>
       <div class="header-middle">
         <div class="container">
           <div class="row py-4">
@@ -46,19 +41,21 @@
                 <img src="./images/Logo.png" alt="logo" />
               </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-12">
-              <div class="search-bar d-flex">
-                <input
-                  class="search"
-                  type="text"
-                  placeholder="Iphone 15 Pro MAX"
-                  name="search"
-                  id="search"
-                />
-                <button type="submit" class="btn-search">Tìm kiếm</button>
-              </div>
+            <div class="col-lg-7 col-md-12 col-12">
+              <form action="" class="frm-search">
+                <div class="search-bar d-flex">
+                  <input
+                    class="search"
+                    type="text"
+                    placeholder="Iphone 15 Pro MAX"
+                    name="search"
+                    id="search"
+                  />
+                  <button type="submit" class="btn-search">Tìm kiếm</button>
+                </div>
+              </form>
             </div>
-            <div class="col-lg-4 col-md-8 col-12 col-sm-8 col-12">
+            <div class="col-lg-3 col-md-8 col-12 col-sm-8 col-12">
               <div class="header-middle-right">
                 <div class="login-info">
                   <a href="#">
@@ -69,12 +66,24 @@
                   </a>
                 </div>
                 <div class="cart-info">
-                  <a href="#">
-                    <div class="cart">
+                  <div class="cart">
+                    <div class="cart-icon">
+                      <span class="cart-count">0</span>
                       <i class="bi bi-cart"></i>
-                      Giỏ hàng
                     </div>
-                  </a>
+                    <span class="cart-title">Giỏ hàng</span>
+                  </div>
+                  <div class="mini-cart">
+                    <ul class="cart-list"></ul>
+                    <div class="total-group">
+                      <div class="total-text"><strong>Tổng:</strong></div>
+                      <div class="total-price">2000</div>
+                    </div>
+                    <div class="btn-cart-group">
+                      <a href="#" class="cart-button"> Xem giỏ hàng </a>
+                      <a href="#" class="cart-button"> Thanh Toán </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -82,24 +91,36 @@
         </div>
       </div>
       <div class="header-bottom">
-        <div class="container">
+        <div class="container full-sm">
           <div class="nav-menu">
             <div class="categories">
-              <i class="bi bi-text-left"></i> <span>Danh mục sản phẩm</span> <i class="bi bi-chevron-down"></i>
+              <div class="categories-menu">
+                <i class="bi bi-text-left"></i> <span>Danh mục sản phẩm</span>
+                <i class="bi bi-chevron-down"></i>
+              </div>
               <div class="categories-content">
                 <ul class="categories-list">
                   <li class="categories-item">
-                    <a href="#">
-                      Chuột chơi game
-                    </a></li>
+                    <a href="#"> Chuột chơi game </a>
+                  </li>
                   <li class="categories-item">
-                    <a href="#">Bàn phím cơ</a></li>
+                    <a href="#">Bàn phím cơ</a>
+                  </li>
                   <li class="categories-item">
-                    <a href="#">Tai nghe chơi game</a></li>
-                  <li class="categories-item"><a href="#">Tay cầm chơi game</a></li>
-                  <li class="categories-item"><a href="#">Bàn ghế chơi game</a></li>
-                  <li class="categories-item"><a href="#">Màn hình chơi game</a></li>
-                  <li class="categories-item"><a href="#">Thiết bị chơi game khác</a></li>
+                    <a href="#">Tai nghe chơi game</a>
+                  </li>
+                  <li class="categories-item">
+                    <a href="#">Tay cầm chơi game</a>
+                  </li>
+                  <li class="categories-item">
+                    <a href="#">Bàn ghế chơi game</a>
+                  </li>
+                  <li class="categories-item">
+                    <a href="#">Màn hình chơi game</a>
+                  </li>
+                  <li class="categories-item">
+                    <a href="#">Thiết bị chơi game khác</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -109,13 +130,27 @@
               <li class="menu-item"><a href="">Liên hệ</a></li>
               <li class="menu-item"><a href="">Blog</a></li>
             </ul>
+            <div class="menu-bar">
+              <i class="bi bi-list"></i>
+            </div>
+            <div class="menu-close hidden">
+              <i class="bi bi-x"></i>
+            </div>
           </div>
+          <nav class="menu-mobile-nav">
+            <ul class="menu-mobile">
+              <li class="menu-mobile-item"><a href="#">Trang chủ</a></li>
+              <li class="menu-mobile-item"><a href="">Cửa hàng</a></li>
+              <li class="menu-mobile-item"><a href="">Liên hệ</a></li>
+              <li class="menu-mobile-item"><a href="">Blog</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
     <main>
       <div class="banner">
-        <div class="container">
+        <div class="container full-sm">
           <div class="banner-carousel owl-carousel owl-theme owl-loaded">
             <div class="owl-stage-outer">
               <div class="owl-stage">
@@ -140,7 +175,7 @@
         <div class="container">
           <div class="feature-inner">
             <div class="row">
-              <div class="col-3">
+              <div class="col-lg-3 col-sm-6 col-6">
                 <div class="feature-item">
                   <a href="">
                     <img
@@ -151,7 +186,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-lg-3 col-sm-6 col-6">
                 <div class="feature-item">
                   <a href="">
                     <img
@@ -162,7 +197,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-lg-3 col-sm-6 col-6">
                 <div class="feature-item">
                   <a href="">
                     <img
@@ -173,7 +208,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-3">
+              <div class="col-lg-3 col-sm-6 col-6">
                 <div class="feature-item">
                   <a href="">
                     <img
@@ -202,40 +237,7 @@
           <div class="tab-content">
             <div class="product-list owl-carousel owl-theme owl-loaded">
               <div class="owl-stage-outer">
-                <div class="owl-stage">
-                  <div class="owl-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="owl-stage"></div>
               </div>
             </div>
           </div>
@@ -244,21 +246,21 @@
       <div class="banner-statics mt-5">
         <div class="container">
           <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12 col-12">
               <div class="single-banner-statics">
                 <a href="#">
                   <img src="./images/banner-static-1.png" alt="banner-static" />
                 </a>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12 col-12">
               <div class="single-banner-statics">
                 <a href="#">
                   <img src="./images/banner-static-2.png" alt="banner-static" />
                 </a>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12 col-12">
               <div class="single-banner-statics">
                 <a href="#">
                   <img src="./images/banner-static-3.png" alt="banner-static" />
@@ -339,11 +341,11 @@
             <div class="col-3">
               <div class="collections-banner">
                 <a href="#">
-                  <img src="./images/banner-collection.png" alt="">
+                  <img src="./images/banner-collection.png" alt="" />
                 </a>
               </div>
             </div>
-            <div class="col-9">
+            <div class="col-lg-9 col-sm-12 col-12">
               <div class="group-collections-list">
                 <ul class="collections-list">
                   <li class="collections-item">
@@ -351,7 +353,7 @@
                       <div class="product-thumb">
                         <a href="#">
                           <img
-                            src="./images/product-1.png"
+                            src="./images/products/HyperX/product-1.png"
                             alt="product-name"
                           />
                         </a>
@@ -383,7 +385,7 @@
                       <div class="product-thumb">
                         <a href="#">
                           <img
-                            src="./images/product-1.png"
+                            src="./images/products/HyperX/product-1.png"
                             alt="product-name"
                           />
                         </a>
@@ -415,7 +417,7 @@
                       <div class="product-thumb">
                         <a href="#">
                           <img
-                            src="./images/product-1.png"
+                            src="./images/products/HyperX/product-1.png"
                             alt="product-name"
                           />
                         </a>
@@ -447,7 +449,7 @@
                       <div class="product-thumb">
                         <a href="#">
                           <img
-                            src="./images/product-1.png"
+                            src="./images/products/HyperX/product-1.png"
                             alt="product-name"
                           />
                         </a>
@@ -479,7 +481,135 @@
                       <div class="product-thumb">
                         <a href="#">
                           <img
-                            src="./images/product-1.png"
+                            src="./images/products/HyperX/product-1.png"
+                            alt="product-name"
+                          />
+                        </a>
+                      </div>
+                      <div class="product-caption">
+                        <div class="manufacture-product">
+                          <a href="#">HYPERX</a>
+                        </div>
+                        <div class="product-name">
+                          <a href="#">
+                            <h4>
+                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
+                              Gaming Headset DTS + SoloCast USB Microphone)
+                            </h4>
+                          </a>
+                        </div>
+                        <div class="price-box">
+                          <span class="regular-price">2,490,000đ</span>
+                          <span class="old-price">2,790,000đ</span>
+                        </div>
+                        <button class="btn-cart" type="button">
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="collections-item">
+                    <div class="product-item">
+                      <div class="product-thumb">
+                        <a href="#">
+                          <img
+                            src="./images/products/HyperX/product-1.png"
+                            alt="product-name"
+                          />
+                        </a>
+                      </div>
+                      <div class="product-caption">
+                        <div class="manufacture-product">
+                          <a href="#">HYPERX</a>
+                        </div>
+                        <div class="product-name">
+                          <a href="#">
+                            <h4>
+                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
+                              Gaming Headset DTS + SoloCast USB Microphone)
+                            </h4>
+                          </a>
+                        </div>
+                        <div class="price-box">
+                          <span class="regular-price">2,490,000đ</span>
+                          <span class="old-price">2,790,000đ</span>
+                        </div>
+                        <button class="btn-cart" type="button">
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="collections-item">
+                    <div class="product-item">
+                      <div class="product-thumb">
+                        <a href="#">
+                          <img
+                            src="./images/products/HyperX/product-1.png"
+                            alt="product-name"
+                          />
+                        </a>
+                      </div>
+                      <div class="product-caption">
+                        <div class="manufacture-product">
+                          <a href="#">HYPERX</a>
+                        </div>
+                        <div class="product-name">
+                          <a href="#">
+                            <h4>
+                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
+                              Gaming Headset DTS + SoloCast USB Microphone)
+                            </h4>
+                          </a>
+                        </div>
+                        <div class="price-box">
+                          <span class="regular-price">2,490,000đ</span>
+                          <span class="old-price">2,790,000đ</span>
+                        </div>
+                        <button class="btn-cart" type="button">
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="collections-item">
+                    <div class="product-item">
+                      <div class="product-thumb">
+                        <a href="#">
+                          <img
+                            src="./images/products/HyperX/product-1.png"
+                            alt="product-name"
+                          />
+                        </a>
+                      </div>
+                      <div class="product-caption">
+                        <div class="manufacture-product">
+                          <a href="#">HYPERX</a>
+                        </div>
+                        <div class="product-name">
+                          <a href="#">
+                            <h4>
+                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
+                              Gaming Headset DTS + SoloCast USB Microphone)
+                            </h4>
+                          </a>
+                        </div>
+                        <div class="price-box">
+                          <span class="regular-price">2,490,000đ</span>
+                          <span class="old-price">2,790,000đ</span>
+                        </div>
+                        <button class="btn-cart" type="button">
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="collections-item">
+                    <div class="product-item">
+                      <div class="product-thumb">
+                        <a href="#">
+                          <img
+                            src="./images/products/HyperX/product-1.png"
                             alt="product-name"
                           />
                         </a>
@@ -507,169 +637,6 @@
                     </div>
                   </li>
                 </ul>
-                <ul class="collections-list">
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-      
               </div>
             </div>
           </div>
@@ -684,91 +651,73 @@
           <div class="tab-content mt-4">
             <div class="blog-wrapper">
               <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 col-sm-12 col-12">
                   <div class="blog-main">
                     <div class="blog-image">
                       <a href="#">
-                        <img src="./images/blog-1.png" alt="blog-1">
+                        <img src="./images/blog-1.png" alt="blog-1" />
                       </a>
                     </div>
                     <div class="blog-title">
                       <h4>
-                        <a href="#">
-                          Siêu thanh lý loa từ 1.5 triệu
-                        </a>
+                        <a href="#"> Siêu thanh lý loa từ 1.5 triệu </a>
                       </h4>
                     </div>
                     <div class="blog-date">13 tháng 04 năm 2024</div>
-                  </div>                 
+                  </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-sm-12 col-12">
                   <ul class="blog-list">
                     <li class="blog-item">
                       <div class="blog-item-image">
                         <a href="">
-                          <img src="./images/blog-1.png" alt="">
+                          <img src="./images/blog-1.png" alt="" />
                         </a>
                       </div>
                       <div class="blog-item-detail">
                         <div class="blog-item-title">
-                          <a href="#">
-                            Chương trình thu cũ lấy mới
-                          </a>
+                          <a href="#"> Chương trình thu cũ lấy mới </a>
                         </div>
-                        <div class="blog-item-date">
-                          15 tháng 4 năm 2024
-                        </div>
+                        <div class="blog-item-date">15 tháng 4 năm 2024</div>
                       </div>
                     </li>
                     <li class="blog-item">
                       <div class="blog-item-image">
                         <a href="">
-                          <img src="./images/blog-1.png" alt="">
+                          <img src="./images/blog-1.png" alt="" />
                         </a>
                       </div>
                       <div class="blog-item-detail">
                         <div class="blog-item-title">
-                          <a href="#">
-                            Chương trình thu cũ lấy mới
-                          </a>
+                          <a href="#"> Chương trình thu cũ lấy mới </a>
                         </div>
-                        <div class="blog-item-date">
-                          15 tháng 4 năm 2024
-                        </div>
+                        <div class="blog-item-date">15 tháng 4 năm 2024</div>
                       </div>
                     </li>
                     <li class="blog-item">
                       <div class="blog-item-image">
                         <a href="">
-                          <img src="./images/blog-1.png" alt="">
+                          <img src="./images/blog-1.png" alt="" />
                         </a>
                       </div>
                       <div class="blog-item-detail">
                         <div class="blog-item-title">
-                          <a href="#">
-                            Chương trình thu cũ lấy mới
-                          </a>
+                          <a href="#"> Chương trình thu cũ lấy mới </a>
                         </div>
-                        <div class="blog-item-date">
-                          15 tháng 4 năm 2024
-                        </div>
+                        <div class="blog-item-date">15 tháng 4 năm 2024</div>
                       </div>
                     </li>
                     <li class="blog-item">
                       <div class="blog-item-image">
                         <a href="">
-                          <img src="./images/blog-1.png" alt="">
+                          <img src="./images/blog-1.png" alt="" />
                         </a>
                       </div>
                       <div class="blog-item-detail">
                         <div class="blog-item-title">
-                          <a href="#">
-                            Chương trình thu cũ lấy mới
-                          </a>
+                          <a href="#"> Chương trình thu cũ lấy mới </a>
                         </div>
-                        <div class="blog-item-date">
-                          15 tháng 4 năm 2024
-                        </div>
+                        <div class="blog-item-date">15 tháng 4 năm 2024</div>
                       </div>
                     </li>
                   </ul>
@@ -782,34 +731,30 @@
     <footer class="footer">
       <div class="newsletter-group">
         <div class="container">
-              <div class="newsletter-box">
-                <div class="newsletter-inner">
-                  <div class="newsletter-title">
-                    <h3>Đăng kí nhận bản tin</h3>
-                    <p>Để nhận thông tin mới nhất từ Khang Store</p>
-                  </div>
-                  <div class="newsletter-mail">
-                    <form action="" class="mc-form">
-                      <div class="email-group">
-                        <input
-                          type="email"
-                          class="email-box"
-                          name=""
-                          id="mc-email"
-                          placeholder="Nhập địa chỉ email của bạn"
-                        />
-                        <button
-                          class="btn-newsletter"
-                          type="submit"
-                          id="mc-submit"
-                        >
-                          Đăng kí
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+          <div class="newsletter-box">
+            <div class="newsletter-inner">
+              <div class="newsletter-title">
+                <h3>Đăng kí nhận bản tin</h3>
+                <p>Để nhận thông tin mới nhất từ Khang Store</p>
               </div>
+              <div class="newsletter-mail">
+                <form action="" class="mc-form">
+                  <div class="email-group">
+                    <input
+                      type="email"
+                      class="email-box"
+                      name=""
+                      id="mc-email"
+                      placeholder="Nhập địa chỉ email của bạn"
+                    />
+                    <button class="btn-newsletter" type="submit" id="mc-submit">
+                      Đăng kí
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer-top">
@@ -825,11 +770,12 @@
                   </div>
                 </div>
                 <div class="widget-body">
-                  Khang Store đồ án webisite bán gaming gear cuối kì môn học thực hành nhập môn web
+                  Khang Store đồ án webisite bán gaming gear cuối kì môn học
+                  thực hành nhập môn web
                 </div>
               </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <!-- <div class="col-lg-2 col-md-6 col-sm-6">
               <div class="footer-single-widget">
                 <div class="widget-title">
                   Thông tin
@@ -844,41 +790,50 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer-single-widget">
-                <div class="widget-title">
-                  Thông tin
-                </div>
+                <div class="widget-title">Thông tin</div>
                 <div class="widget-body">
                   <div class="footer-useful-link">
                     <ul class="contact-list">
-                      <li class="contact-item">Địa chỉ: 180 Cao Lỗ, Phường 4, Quận 8, TP Hồ Chí Minh</li>
-                      <li class="contact-item">Email: DH52102716@student.stu.edu.vn</li>
-                      <li class="contact-item">Điện thoại:  (028) 38 505 520</li>
+                      <li class="contact-item">
+                        Địa chỉ: 180 Cao Lỗ, Phường 4, Quận 8, TP Hồ Chí Minh
+                      </li>
+                      <li class="contact-item">
+                        Email: DH52102716@student.stu.edu.vn
+                      </li>
+                      <li class="contact-item">Điện thoại: (028) 38 505 520</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
-              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61556205325307&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=5943483605700240" width="100%" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            </div>
-            </div>
-          </div>
-        </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <hr>
-              <div class="footer-copyright">
-                Copyright © 2024 Thai Tin Khang 
-              </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6592.4985499755685!2d106.6789931371774!3d10.74041089759156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1714125058390!5m2!1svi!2s"
+                width="100%"
+                height="250"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
       </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <hr />
+              <div class="footer-copyright">
+                Copyright © 2024 Thai Tin Khang
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Bootstrap -->
@@ -901,5 +856,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/owl-carousel.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

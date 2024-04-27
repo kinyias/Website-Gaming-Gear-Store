@@ -65,3 +65,44 @@
     }
   }
 }
+@media (max-width: $mobile) {
+  .banner {
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      .owl-next {
+        transform: translateY(-50%);
+        right: 5px;
+      }
+      .owl-prev {
+        transform: translateY(-50%);
+        left: 5px;
+      }
+      .owl-next,
+      .owl-prev {
+        width: 35px;
+        height: 35px;
+        border-radius: 999px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        &:hover {
+          background-color: $primary-color !important;
+          i {
+            color: #ffffff;
+          }
+        }
+        i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
