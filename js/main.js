@@ -3,8 +3,8 @@ const categories_menu = document.querySelector('.categories-menu');
 const cart = document.querySelector('.cart');
 const header_bottom = document.querySelector('.header-bottom');
 const menu_bar = document.querySelector('.menu-bar');
-const menu_close = document.querySelector('.menu-close')
-const menu_mobile_nav = document.querySelector('.menu-mobile-nav')
+const menu_close = document.querySelector('.menu-close');
+const menu_mobile_nav = document.querySelector('.menu-mobile-nav');
 //generateSearchKey
 const messages = [
   'Bàn phím akko',
@@ -25,6 +25,7 @@ function initApp() {
     .then((data) => {
       listProducts = data;
       generateProductList(listProducts);
+      generateCollections(listProducts);
       generateSearchKey();
       loadCartToHTML();
     });
@@ -51,16 +52,16 @@ cart.addEventListener('click', function () {
 });
 
 //menu-mobile toggle
-menu_bar.addEventListener('click', function(){
-  menu_bar.classList.toggle('hidden')
-  menu_close.classList.toggle('hidden')
-  menu_mobile_nav.classList.toggle('show')
-})
-menu_close.addEventListener('click', function(){
-  menu_bar.classList.toggle('hidden')
-  menu_close.classList.toggle('hidden')
-  menu_mobile_nav.classList.toggle('show')
-})
+menu_bar.addEventListener('click', function () {
+  menu_bar.classList.toggle('hidden');
+  menu_close.classList.toggle('hidden');
+  menu_mobile_nav.classList.toggle('show');
+});
+menu_close.addEventListener('click', function () {
+  menu_bar.classList.toggle('hidden');
+  menu_close.classList.toggle('hidden');
+  menu_mobile_nav.classList.toggle('show');
+});
 
 //Format number sang VND
 function formatVND(number) {
@@ -100,7 +101,7 @@ function generateProductList(listProducts) {
   const productList = document.querySelector(
     '.product-list .owl-stage-outer .owl-stage'
   );
-  if(productList){
+  if (productList) {
     const listShow = listProducts.slice(0, 5);
     listShow.forEach((item) => {
       productList.innerHTML += `<div class="owl-item">
@@ -164,6 +165,77 @@ function generateProductList(listProducts) {
           items: 4,
         },
       },
+    });
+
+    //Add toast animation
+    const btn_carts = document.querySelectorAll('.product-caption .btn-cart');
+    btn_carts.forEach((btn) => {
+      console.log(btn);
+      btn.addEventListener('click', () => {
+        Toastify({
+          text: 'Đã thêm vào giỏ hàng',
+          style: {
+            background: 'linear-gradient(to right, #00b09b, #96c93d)',
+          },
+          duration: 3000,
+        }).showToast();
+      });
+    });
+  }
+}
+
+function generateCollections(listProducts) {
+  const collections = document.querySelector('.collections-list');
+  if (collections) {
+    const listShow = listProducts.slice(0, 8);
+    listShow.forEach((item) => {
+      collections.innerHTML += `<li class="collections-item">
+      <div class="product-item">
+        <div class="product-thumb">
+          <a href="#">
+            <img
+              src="${item.img}"
+              alt="product-name"
+            />
+          </a>
+        </div>
+        <div class="product-caption">
+          <div class="manufacture-product">
+            <a href="#">${item.category}</a>
+          </div>
+          <div class="product-name">
+            <a href="#">
+              <h4>
+                ${item.name}
+              </h4>
+            </a>
+          </div>
+          <div class="price-box">
+            <span class="regular-price ${item.price_old ? 'sale' : ''}">${formatVND(item.price)}</span>
+            <span class="old-price">${item.price_old ? formatVND(item.price_old) : ''}</span>
+          </div>
+          <button class="btn-cart" onclick="addToCart(${
+            item.id
+          })" type="button">
+            Thêm vào giỏ
+          </button>
+        </div>
+      </div>
+    </li>`;
+    });
+    //Add toast animation
+    const btn_carts = document.querySelectorAll('.product-caption .btn-cart');
+    btn_carts.forEach((btn) => {
+      console.log(btn);
+      btn.addEventListener('click', () => {
+        Toastify({
+          text: 'Đã thêm vào giỏ hàng',
+          style: {
+            background: 'linear-gradient(to right, #00b09b, #96c93d)',
+          },
+          duration: 3000,
+        }).showToast();
+      });
     });
   }
 }

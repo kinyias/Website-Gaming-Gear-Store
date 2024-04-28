@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/Logo.png" type="image/x-icon" />
-    <title>Khang Store - Điện thoại chính hãng</title>
+    <title>Khang Store - Gaming gear chính hãng</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,6 +29,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/home.css" />
   </head>
@@ -37,9 +42,11 @@
       <div class="header-middle">
         <div class="container">
           <div class="row py-4">
-            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
+            <div class="col-lg-2 col-md-12 col-sm-12 col-12">
               <div class="logo">
-                <img src="./images/Logo.png" alt="logo" />
+                <a href="index.html">
+                  <img src="./images/Logo.png" alt="logo" />
+                </a>
               </div>
             </div>
             <div class="col-lg-7 col-md-12 col-12">
@@ -56,7 +63,7 @@
                 </div>
               </form>
             </div>
-            <div class="col-lg-3 col-md-8 col-12 col-sm-8 col-12">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-12">
               <div class="header-middle-right">
                 <div class="login-info">
                   <a href="#">
@@ -78,11 +85,13 @@
                     <ul class="cart-list"></ul>
                     <div class="total-group">
                       <div class="total-text"><strong>Tổng:</strong></div>
-                      <div class="total-price">2000</div>
+                      <div class="total-price">0</div>
                     </div>
                     <div class="btn-cart-group">
-                      <a href="#" class="cart-button"> Xem giỏ hàng </a>
-                      <a href="#" class="cart-button"> Thanh Toán </a>
+                      <a href="cart.html" class="cart-button"> Xem giỏ hàng </a>
+                      <a href="checkout.html" class="cart-button">
+                        Thanh Toán
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -141,11 +150,19 @@
           </div>
           <nav class="menu-mobile-nav">
             <ul class="menu-mobile">
-              <li class="menu-mobile-item"><a href="index.html">Trang chủ</a></li>
-              <li class="menu-mobile-item"><a href="store.html">Cửa hàng</a></li>
-              <li class="menu-mobile-item"><a href="contact.html">Liên hệ</a></li>
+              <li class="menu-mobile-item">
+                <a href="index.html">Trang chủ</a>
+              </li>
+              <li class="menu-mobile-item">
+                <a href="store.html">Cửa hàng</a>
+              </li>
+              <li class="menu-mobile-item">
+                <a href="contact.html">Liên hệ</a>
+              </li>
               <li class="menu-mobile-item"><a href="blog.html">Blog</a></li>
-              <li class="menu-mobile-item"><a href="about.html">Về chúng tôi</a></li>
+              <li class="menu-mobile-item">
+                <a href="about.html">Về chúng tôi</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -350,296 +367,7 @@
             </div>
             <div class="col-lg-9 col-sm-12 col-12">
               <div class="group-collections-list">
-                <ul class="collections-list">
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="collections-item">
-                    <div class="product-item">
-                      <div class="product-thumb">
-                        <a href="#">
-                          <img
-                            src="./images/products/HyperX/product-1.png"
-                            alt="product-name"
-                          />
-                        </a>
-                      </div>
-                      <div class="product-caption">
-                        <div class="manufacture-product">
-                          <a href="#">HYPERX</a>
-                        </div>
-                        <div class="product-name">
-                          <a href="#">
-                            <h4>
-                              Bộ combo HyperX Streamer Starter Pack (Cloud Core
-                              Gaming Headset DTS + SoloCast USB Microphone)
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="price-box">
-                          <span class="regular-price">2,490,000đ</span>
-                          <span class="old-price">2,790,000đ</span>
-                        </div>
-                        <button class="btn-cart" type="button">
-                          Thêm vào giỏ
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                <ul class="collections-list"></ul>
               </div>
             </div>
           </div>
@@ -778,22 +506,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col-lg-2 col-md-6 col-sm-6">
-              <div class="footer-single-widget">
-                <div class="widget-title">
-                  Thông tin
-                </div>
-                <div class="widget-body">
-                  <div class="footer-useful-link">
-                    <ul class="link-list">
-                      <li class="link-item"><a href="">Về chúng tôi</a></li>
-                      <li class="link-item"><a href="">Liên hệ</a></li>
-                      <li class="link-item"><a href="">Bản đồ</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div> -->
             <div class="col-lg-3 col-md-6 col-sm-6">
               <div class="footer-single-widget">
                 <div class="widget-title">Thông tin</div>
@@ -857,6 +569,11 @@
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    ></script>
+    <!-- Toast message -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
     <script src="./js/owl-carousel.js"></script>
     <script src="./js/main.js"></script>

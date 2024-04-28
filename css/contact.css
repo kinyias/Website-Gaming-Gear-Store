@@ -69,7 +69,7 @@
 }
 .header-middle .header-middle-right .cart-info {
   position: relative;
-  width: 60%;
+  width: 50%;
 }
 .header-middle .header-middle-right .login:hover {
   color: #23b55c;
@@ -298,6 +298,73 @@
   display: none;
 }
 
+@media (max-width: 992px) {
+  .header-middle .logo {
+    text-align: center;
+  }
+  .header-middle .logo img {
+    width: 75%;
+  }
+  .header-middle .search-bar {
+    height: 52px;
+  }
+  .header-middle .header-middle-right {
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .header-bottom .nav-menu {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .header-bottom .nav-menu .menu {
+    display: none;
+  }
+  .header-bottom .nav-menu .categories-menu {
+    background-color: #222 !important;
+  }
+  .menu-bar,
+  .menu-close {
+    display: block;
+    margin-right: 10px;
+  }
+  .menu-bar i,
+  .menu-close i {
+    display: flex;
+    font-size: 30px;
+  }
+  .menu-mobile-nav {
+    display: block;
+    max-height: 0;
+    transition: 0.6s;
+    overflow: hidden;
+  }
+  .menu-mobile-nav .menu-mobile {
+    display: block;
+  }
+  .menu-mobile-nav .menu-mobile-item {
+    text-align: center;
+    padding: 0px 10px;
+  }
+  .menu-mobile-nav .menu-mobile-item a {
+    display: block;
+    background: #222;
+    border-top: 1px solid #333;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .menu-mobile-nav.show {
+    padding-bottom: 10px;
+    max-height: 200px;
+  }
+  .menu-mobile-nav.show .menu-mobile {
+    display: block;
+  }
+  .hidden {
+    display: none !important;
+  }
+}
 /* Responsive mobile */
 @media (max-width: 576px) {
   .header-middle .logo {
@@ -450,6 +517,29 @@
   padding: 10px;
 }
 
+@media (max-width: 992px) {
+  .footer .newsletter-group .newsletter-inner {
+    flex-direction: column;
+  }
+  .footer .newsletter-group .newsletter-inner .newsletter-title {
+    text-align: center;
+  }
+  .footer .newsletter-group .newsletter-inner .newsletter-mail {
+    width: 100%;
+  }
+  .footer .newsletter-group .newsletter-inner .newsletter-mail .btn-newsletter {
+    line-height: normal;
+  }
+  .footer .newsletter-group .newsletter-mail .email-box {
+    width: 100% !important;
+  }
+  .footer-top {
+    padding-top: 20px;
+  }
+  .footer-top .footer-single-widget {
+    margin-bottom: 15px;
+  }
+}
 @media (max-width: 576px) {
   .footer .newsletter-group .newsletter-inner {
     flex-direction: column;

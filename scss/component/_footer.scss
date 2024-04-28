@@ -88,6 +88,36 @@
   }
 }
 
+@media (max-width: $tablet) {
+  .footer {
+    .newsletter-group {
+      .newsletter-inner {
+        flex-direction: column;
+        .newsletter-title {
+          text-align: center;
+        }
+        .newsletter-mail {
+          width: 100%;
+          .btn-newsletter {
+            line-height: normal;
+          }
+        }
+      }
+      .newsletter-mail {
+        .email-box {
+          width: 100% !important;
+        }
+      }
+    }
+    &-top {
+      padding-top: 20px;
+      .footer-single-widget {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
 @media (max-width: $mobile) {
   .footer {
     .newsletter-group {

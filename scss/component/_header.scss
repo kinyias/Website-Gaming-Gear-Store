@@ -69,7 +69,7 @@
     gap: 15px;
     .cart-info {
       position: relative;
-      width: 60%;
+      width: 50%;
     }
     .login{
       &:hover{
@@ -301,6 +301,80 @@
   display: none;
 }
 
+@media (max-width: $tablet) {
+  .header-middle {
+    .logo {
+      text-align: center;
+      img {
+        width: 50%;
+      }
+    }
+    .search-bar {
+      height: 52px;
+    }
+    .header-middle-right {
+      justify-content: center;
+      margin-top: 5px;
+      width: 100%;
+    }
+  }
+  .header-bottom {
+    .nav-menu {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      .menu {
+        display: none;
+      }
+      .categories {
+        &-menu {
+          background-color: #222 !important ;
+        }
+      }
+    }
+  }
+  .menu-bar,
+  .menu-close {
+    display: block;
+    margin-right: 10px;
+    i {
+      display: flex;
+      font-size: 30px;
+    }
+  }
+
+  .menu-mobile-nav {
+    display: block;
+    max-height: 0;
+    transition: 0.6s;
+    overflow: hidden;
+    .menu-mobile {
+      display: block;
+      &-item {
+        text-align: center;
+        padding: 0px 10px;
+        a {
+          display: block;
+          background: #222;
+          border-top: 1px solid #333;
+          color: #ffffff;
+          width: 100%;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  .menu-mobile-nav.show {
+    .menu-mobile{
+      display: block;
+    }
+    padding-bottom: 10px;
+    max-height: 200px;
+  }
+  .hidden {
+    display: none !important;
+  }
+}
 /* Responsive mobile */
 @media (max-width: $mobile) {
   .header-middle {

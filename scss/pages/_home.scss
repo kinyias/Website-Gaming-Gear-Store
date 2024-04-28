@@ -341,7 +341,50 @@
     }
   }
 }
+@media (max-width: $tablet) {
+  .full-sm{
+    padding: 0;
+  }
 
+  .feature-style{
+    .feature-item{
+      margin-bottom: 10px;
+    }
+  }
+  .product-item{
+    .product-caption{
+      .btn-cart{
+        padding: 0px 15px;
+      }
+    }
+  }
+  .banner-statics {
+    .single-banner-statics {
+      margin-bottom: 10px;
+    }
+  }
+  .collections{
+    &-banner{
+      display: none;
+    }
+    &-list{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .blog{
+    &-wrapper{
+      padding: 15px;
+    }
+    &-list{
+      .blog-item{
+        margin-top: 10px;
+        &-image{
+          width: 45%;
+        }
+      }
+    }
+  }
+}
 @media (max-width: $mobile) {
   .full-sm{
     padding: 0;
