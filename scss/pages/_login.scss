@@ -1,0 +1,33 @@
+@import '../component/header';
+@import '../component/footer';
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.login-wrapper {
+  padding-bottom: 70px;
+  .login-form {
+    padding: 50px 50px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  p{
+    margin: 0;
+    padding: 0;
+    a{
+        color: #0d6efd;
+    }
+  }
+  .btn-login{
+    background-color: $secondary-color;
+    color: #ffffff;
+    transition: .3s;
+    &:hover{
+        background-color: $primary-color;
+    }
+  }
+
+}
