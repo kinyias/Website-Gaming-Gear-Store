@@ -32,22 +32,22 @@
       -webkit-box-orient: vertical;
       display: -webkit-box;
     }
-    .blog-post-meta {
-      color: #74839f;
-      font-size: 13px;
-    }
-    .date::before {
-      content: '';
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      margin: -1px 10px 0;
-      border-radius: 100%;
-      background-color: #74839f;
-      opacity: 0.4;
-      vertical-align: middle;
-    }
-  }
+}
+}
+.blog-post-meta {
+  color: #74839f;
+  font-size: 13px;
+}
+.date::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: -1px 10px 0;
+  border-radius: 100%;
+  background-color: #74839f;
+  opacity: 0.4;
+  vertical-align: middle;
 }
 
 .sidebar-blog {

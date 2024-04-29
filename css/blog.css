@@ -593,11 +593,13 @@
   -webkit-box-orient: vertical;
   display: -webkit-box;
 }
-.blog-wrapper .blog-detail .blog-post-meta {
+
+.blog-post-meta {
   color: #74839f;
   font-size: 13px;
 }
-.blog-wrapper .blog-detail .date::before {
+
+.date::before {
   content: "";
   display: inline-block;
   width: 5px;
