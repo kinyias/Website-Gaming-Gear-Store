@@ -27,6 +27,7 @@ function initApp() {
       generateProductList(listProducts);
       generateCollections(listProducts);
       generateSearchKey();
+      toastMessage();
       loadCartToHTML();
     });
 }
@@ -73,7 +74,22 @@ function formatVND(number) {
     .replaceAll('.', ',');
   return formatted_number;
 }
-
+//Add toast animation
+function toastMessage(){
+  const btn_carts = document.querySelectorAll('.product-caption .btn-cart');
+  btn_carts.forEach((btn) => {
+    console.log(btn);
+    btn.addEventListener('click', () => {
+      Toastify({
+        text: 'Đã thêm vào giỏ hàng',
+        style: {
+          background: 'linear-gradient(to right, #00b09b, #96c93d)',
+        },
+        duration: 3000,
+      }).showToast();
+    });
+  });
+}
 //Tao placeholder tu dong cho input tim kiem
 function generateSearchKey() {
   if (currentMessageIndex === messages.length) currentMessageIndex = 0;
@@ -167,20 +183,6 @@ function generateProductList(listProducts) {
       },
     });
 
-    //Add toast animation
-    const btn_carts = document.querySelectorAll('.product-caption .btn-cart');
-    btn_carts.forEach((btn) => {
-      console.log(btn);
-      btn.addEventListener('click', () => {
-        Toastify({
-          text: 'Đã thêm vào giỏ hàng',
-          style: {
-            background: 'linear-gradient(to right, #00b09b, #96c93d)',
-          },
-          duration: 3000,
-        }).showToast();
-      });
-    });
   }
 }
 
@@ -222,20 +224,6 @@ function generateCollections(listProducts) {
         </div>
       </div>
     </li>`;
-    });
-    //Add toast animation
-    const btn_carts = document.querySelectorAll('.product-caption .btn-cart');
-    btn_carts.forEach((btn) => {
-      console.log(btn);
-      btn.addEventListener('click', () => {
-        Toastify({
-          text: 'Đã thêm vào giỏ hàng',
-          style: {
-            background: 'linear-gradient(to right, #00b09b, #96c93d)',
-          },
-          duration: 3000,
-        }).showToast();
-      });
     });
   }
 }
