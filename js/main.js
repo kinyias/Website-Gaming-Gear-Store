@@ -36,12 +36,12 @@ function initApp() {
       listProducts = data1;
       listCategories = data2;
       listBlogs = data3;
+      generateSearchKey();
       generateCategories(listCategories);
       generatefeaturedCategoriesList(listCategories);
       generateProductList(listProducts);
       generateCollections(listProducts);
       generateBlogs(listBlogs);
-      generateSearchKey();
       toastMessage();
       loadCartToHTML();
     })
@@ -94,7 +94,7 @@ function formatVND(number) {
 }
 //Add toast animation
 function toastMessage() {
-  const btn_carts = document.querySelectorAll('.product-caption .btn-cart');
+  const btn_carts = document.querySelectorAll('.btn-cart');
   btn_carts.forEach((btn) => {
     btn.addEventListener('click', () => {
       Toastify({
@@ -141,13 +141,13 @@ function generateCategories(listCategories) {
   });
 }
 
-function getCountProductsOfCategories(id){
+function getCountProductsOfCategories(id) {
   let sum = 0;
-  listProducts.forEach((p)=>{
-    if(p.category == id){
+  listProducts.forEach((p) => {
+    if (p.category == id) {
       sum++;
     }
-  })
+  });
   return sum;
 }
 
@@ -163,7 +163,9 @@ function generatefeaturedCategoriesList(listCategories) {
           <h4 class="category-item-name">
             <a href="#"> ${item.name} </a>
           </h4>
-          <div class="total-items">${getCountProductsOfCategories(item.id)} sản phẩm</div>
+          <div class="total-items">${getCountProductsOfCategories(
+            item.id
+          )} sản phẩm</div>
           <a href="" class="shop-btn">+ Xem thêm</a>
         </div>
         <div class="category-item-thumb">
@@ -188,7 +190,7 @@ function generateProductList(listProducts) {
       productList.innerHTML += `<div class="owl-item">
       <div class="product-item">
       <div class="product-thumb">
-      <a href="#">
+      <a href="product-detail.html?id=${item.id}">
       <img
       src="${item.img}"
       alt="product-name"
@@ -197,10 +199,10 @@ function generateProductList(listProducts) {
       </div>
       <div class="product-caption">
       <div class="manufacture-product">
-      <a href="#">${item.brand}</a>
+      <a href="product-detail.html?id=${item.id}">${item.brand}</a>
       </div>
       <div class="product-name">
-      <a href="#">
+      <a href="product-detail.html?id=${item.id}">
       <h4>
       ${item.name}
       </h4>
@@ -258,7 +260,7 @@ function generateCollections(listProducts) {
       collections.innerHTML += `<li class="collections-item">
       <div class="product-item">
         <div class="product-thumb">
-          <a href="#">
+          <a href="product-detail.html?id=${item.id}">
             <img
               src="${item.img}"
               alt="product-name"
@@ -267,10 +269,10 @@ function generateCollections(listProducts) {
         </div>
         <div class="product-caption">
           <div class="manufacture-product">
-            <a href="#">${item.category}</a>
+            <a hrefproduct-detail.html?id=${item.id}">${item.brand}</a>
           </div>
           <div class="product-name">
-            <a href="#">
+            <a href="product-detail.html?id=${item.id}">
               <h4>
                 ${item.name}
               </h4>
@@ -301,8 +303,8 @@ function generateBlogs(listBlogs) {
   const blog_main = document.querySelector('.blog-main');
   let blogMain = listBlogs.slice(0, 1)[0];
   let blogList = listBlogs.slice(1, 5);
- if(blog_list && blog_main){
-   blog_main.innerHTML = `
+  if (blog_list && blog_main) {
+    blog_main.innerHTML = `
    <div class="blog-image">
    <a href="blog-detail.html?id=${blogMain.id}">
      <img src="${blogMain.img}" alt="${blogMain.title}" />
@@ -315,8 +317,8 @@ function generateBlogs(listBlogs) {
  </div>
  <div class="blog-date">${blogMain.date}</div>
    `;
-   blogList.forEach((item) => {
-     blog_list.innerHTML += `
+    blogList.forEach((item) => {
+      blog_list.innerHTML += `
      <li class="blog-item">
      <div class="blog-item-image">
        <a href="blog-detail.html?id=${item.id}">
@@ -331,8 +333,8 @@ function generateBlogs(listBlogs) {
      </div>
    </li>
      `;
-   });
- }
+    });
+  }
 }
 
 function getProductById(id) {
@@ -340,6 +342,7 @@ function getProductById(id) {
 }
 
 function addToCart(productId) {
+  console.log(productId);
   let cart = JSON.parse(localStorage.getItem('cart'));
   positionInCart = cart.findIndex((item) => item.productId == productId);
   if (cart.length <= 0) {
@@ -386,14 +389,14 @@ function loadCartToHTML() {
     let product = getProductById(item.productId);
     let newHTML = `<li class="cart-item">
     <div class="cart-image">
-      <a href="#">
+      <a href="product-detail.html?id=${product.id}">
         <img
           src="${product.img}"
         />
       </a>
     </div>
     <div class="cart-info">
-      <h4><a href="#">${product.name} </a></h4>
+      <h4><a href="product-detail.html?id=${product.id}">${product.name} </a></h4>
       <span
         >${item.quantity} x
         <span>${formatVND(product.price)}</span>

@@ -342,6 +342,12 @@
       margin-bottom: 10px;
     }
   }
+  .featured-categories {
+    &-list {
+      grid-template-columns: 1fr;
+      gap: 0px;
+    }
+  }
   .product-item {
     .product-caption {
       .btn-cart {
@@ -384,6 +390,12 @@
   .feature-style {
     .feature-item {
       margin-bottom: 10px;
+    }
+  }
+  .featured-categories {
+    &-list {
+      grid-template-columns: 1fr;
+      gap: 0px;
     }
   }
   .product-item {
