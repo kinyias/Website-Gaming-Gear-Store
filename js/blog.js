@@ -11,7 +11,7 @@ function initBlog() {
 }
 
 function generateBlogList(listBlogs) {
-  const blog_list = document.querySelector('.blog-list');
+  const blog_list = document.querySelector('.blog-list-blog ');
   if (blog_list) {
     const listShow = listBlogs.slice(0, 4);
     listShow.forEach((item) => {
@@ -19,14 +19,14 @@ function generateBlogList(listBlogs) {
             <div class="blog-item col-6 mb-3">
                     <div class="blog-item-inner">
                       <div class="blog-image">
-                        <a href="detail-blog.html?id=${item.id}">
+                        <a href="blog-detail.html?id=${item.id}">
                           <img src="${item.img}" alt="${item.title}" />
                         </a>
                       </div>
                       <div class="blog-detail">
                         <div class="blog-title">
                           <h3>
-                            <a href="detail-blog.html?id=${item.id}"> ${item.title} </a>
+                            <a href="blog-detail.html?id=${item.id}"> ${item.title} </a>
                           </h3>
                         </div>
                         <div class="blog-content">
@@ -52,14 +52,14 @@ function generateBlogListLastets(listBlogs) {
       blog_list.innerHTML += `
             <li class="blog-item-lastest">
                         <div class="blog-image-lastest">
-                          <a href="detail-blog.html?id=${item.id}">
+                          <a href="blog-detail.html?id=${item.id}">
                             <img src="${item.img}" alt="" />
                           </a>
                         </div>
                         <div class="blog-detail-lastest">
                           <div class="blog-title-lastest">
                             <h3>
-                              <a href="detail-blog.html?id=${item.id}">${item.title}</a>
+                              <a href="blog-detail.html?id=${item.id}">${item.title}</a>
                             </h3>
                           </div>
                           <div class="blog-post-meta">

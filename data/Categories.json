@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Chuột chơi game",
+    "img": "./images/categories/cate-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Bàn phím cơ",
+    "img": "./images/categories/cate-2.png"
+  },
+  {
+    "id": 3,
+    "name": "Tai nghe gaming",
+    "img": "./images/categories/cate-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Tay cầm chơi game",
+    "img": "./images/categories/cate-4.png"
+  },
+  {
+    "id": 5,
+    "name": "Bàn ghế chơi game",
+    "img": "./images/categories/cate-5.png"
+  },
+  {
+    "id": 6,
+    "name": "Màn hình chơi game",
+    "img": "./images/categories/cate-6.png"
+  }
+]

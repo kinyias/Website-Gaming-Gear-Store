@@ -19,16 +19,34 @@ let currentCharIndex = 0;
 const typingSpeed = 100;
 let placeholder = '';
 let listProducts = [];
+let listCategories = [];
+let listBlogs = [];
 function initApp() {
-  fetch('../data/Products.json')
-    .then((response) => response.json())
-    .then((data) => {
-      listProducts = data;
+  const request1 = fetch('../data/Products.json').then((response) =>
+    response.json()
+  );
+  const request2 = fetch('../data/Categories.json').then((response) =>
+    response.json()
+  );
+  const request3 = fetch('../data/Blogs.json').then((response) =>
+    response.json()
+  );
+  Promise.all([request1, request2, request3])
+    .then(([data1, data2, data3]) => {
+      listProducts = data1;
+      listCategories = data2;
+      listBlogs = data3;
+      generateCategories(listCategories);
+      generatefeaturedCategoriesList(listCategories);
       generateProductList(listProducts);
       generateCollections(listProducts);
+      generateBlogs(listBlogs);
       generateSearchKey();
       toastMessage();
       loadCartToHTML();
+    })
+    .catch((error) => {
+      console.error(error);
     });
 }
 //Xu ly header top fixed
@@ -75,10 +93,9 @@ function formatVND(number) {
   return formatted_number;
 }
 //Add toast animation
-function toastMessage(){
+function toastMessage() {
   const btn_carts = document.querySelectorAll('.product-caption .btn-cart');
   btn_carts.forEach((btn) => {
-    console.log(btn);
     btn.addEventListener('click', () => {
       Toastify({
         text: 'Đã thêm vào giỏ hàng',
@@ -113,6 +130,54 @@ function generateSearchKey() {
   }
 }
 
+function generateCategories(listCategories) {
+  const categories_list = document.querySelector('.categories-list');
+  listCategories.forEach((item) => {
+    categories_list.innerHTML += `
+    <li class="categories-item">
+    <a href="#"> ${item.name} </a>
+   </li>
+    `;
+  });
+}
+
+function getCountProductsOfCategories(id){
+  let sum = 0;
+  listProducts.forEach((p)=>{
+    if(p.category == id){
+      sum++;
+    }
+  })
+  return sum;
+}
+
+function generatefeaturedCategoriesList(listCategories) {
+  const featured_categories_list = document.querySelector(
+    '.featured-categories-list'
+  );
+  if (featured_categories_list) {
+    listCategories.forEach((item) => {
+      featured_categories_list.innerHTML += `
+        <div class="category-item">
+        <div class="category-item-info">
+          <h4 class="category-item-name">
+            <a href="#"> ${item.name} </a>
+          </h4>
+          <div class="total-items">${getCountProductsOfCategories(item.id)} sản phẩm</div>
+          <a href="" class="shop-btn">+ Xem thêm</a>
+        </div>
+        <div class="category-item-thumb">
+          <a href="#">
+            <img
+              src="${item.img}"
+              alt="${item.name}"
+            />
+          </a>
+        </div>
+      </div>`;
+    });
+  }
+}
 function generateProductList(listProducts) {
   const productList = document.querySelector(
     '.product-list .owl-stage-outer .owl-stage'
@@ -132,7 +197,7 @@ function generateProductList(listProducts) {
       </div>
       <div class="product-caption">
       <div class="manufacture-product">
-      <a href="#">${item.category}</a>
+      <a href="#">${item.brand}</a>
       </div>
       <div class="product-name">
       <a href="#">
@@ -182,7 +247,6 @@ function generateProductList(listProducts) {
         },
       },
     });
-
   }
 }
 
@@ -213,8 +277,12 @@ function generateCollections(listProducts) {
             </a>
           </div>
           <div class="price-box">
-            <span class="regular-price ${item.price_old ? 'sale' : ''}">${formatVND(item.price)}</span>
-            <span class="old-price">${item.price_old ? formatVND(item.price_old) : ''}</span>
+            <span class="regular-price ${
+              item.price_old ? 'sale' : ''
+            }">${formatVND(item.price)}</span>
+            <span class="old-price">${
+              item.price_old ? formatVND(item.price_old) : ''
+            }</span>
           </div>
           <button class="btn-cart" onclick="addToCart(${
             item.id
@@ -226,6 +294,45 @@ function generateCollections(listProducts) {
     </li>`;
     });
   }
+}
+
+function generateBlogs(listBlogs) {
+  const blog_list = document.querySelector('.blog-list');
+  const blog_main = document.querySelector('.blog-main');
+  let blogMain = listBlogs.slice(0, 1)[0];
+  let blogList = listBlogs.slice(1, 5);
+ if(blog_list && blog_main){
+   blog_main.innerHTML = `
+   <div class="blog-image">
+   <a href="blog-detail.html?id=${blogMain.id}">
+     <img src="${blogMain.img}" alt="${blogMain.title}" />
+   </a>
+ </div>
+ <div class="blog-title">
+   <h4>
+     <a href="blog-detail.html?id=${blogMain.id}"> ${blogMain.title}</a>
+   </h4>
+ </div>
+ <div class="blog-date">${blogMain.date}</div>
+   `;
+   blogList.forEach((item) => {
+     blog_list.innerHTML += `
+     <li class="blog-item">
+     <div class="blog-item-image">
+       <a href="blog-detail.html?id=${item.id}">
+         <img src="${item.img}" alt="${item.title}" />
+       </a>
+     </div>
+     <div class="blog-item-detail">
+       <div class="blog-item-title">
+         <a href="blog-detail.html?id=${item.id}"> ${item.title}</a>
+       </div>
+       <div class="blog-item-date">${item.date}</div>
+     </div>
+   </li>
+     `;
+   });
+ }
 }
 
 function getProductById(id) {

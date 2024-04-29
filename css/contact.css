@@ -275,7 +275,7 @@
   color: #ffffff;
 }
 .header-bottom .nav-menu .categories .categories-content.show {
-  max-height: 350px;
+  max-height: 300px;
 }
 .header-bottom .nav-menu .menu {
   display: flex;
@@ -303,7 +303,7 @@
     text-align: center;
   }
   .header-middle .logo img {
-    width: 75%;
+    width: 50%;
   }
   .header-middle .search-bar {
     height: 52px;
@@ -311,6 +311,7 @@
   .header-middle .header-middle-right {
     justify-content: center;
     margin-top: 5px;
+    width: 100%;
   }
   .header-bottom .nav-menu {
     justify-content: space-between;

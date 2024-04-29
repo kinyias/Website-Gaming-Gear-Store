@@ -275,7 +275,7 @@
   color: #ffffff;
 }
 .header-bottom .nav-menu .categories .categories-content.show {
-  max-height: 350px;
+  max-height: 300px;
 }
 .header-bottom .nav-menu .menu {
   display: flex;
