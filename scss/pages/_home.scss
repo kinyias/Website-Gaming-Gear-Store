@@ -88,6 +88,7 @@
   border-radius: 10px;
   transition: 0.3s;
   overflow: hidden;
+  height: 100%;
   &:hover {
     border-color: $primary-color;
     .product-caption {

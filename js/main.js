@@ -255,7 +255,7 @@ function generateProductList(listProducts) {
 function generateCollections(listProducts) {
   const collections = document.querySelector('.collections-list');
   if (collections) {
-    const listShow = listProducts.slice(0, 8);
+    const listShow = listProducts.slice(0, 10);
     listShow.forEach((item) => {
       collections.innerHTML += `<li class="collections-item">
       <div class="product-item">
