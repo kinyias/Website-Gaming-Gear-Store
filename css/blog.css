@@ -142,7 +142,7 @@
   display: block;
 }
 .header-middle .header-middle-right .cart-list {
-  max-height: 200px;
+  max-height: 250px;
   overflow-y: scroll;
 }
 .header-middle .header-middle-right .cart-list:-webkit-scrollbar-track {
@@ -356,7 +356,7 @@
   }
   .menu-mobile-nav.show {
     padding-bottom: 10px;
-    max-height: 200px;
+    max-height: 250px;
   }
   .menu-mobile-nav.show .menu-mobile {
     display: block;
@@ -424,7 +424,7 @@
   }
   .menu-mobile-nav.show {
     padding-bottom: 10px;
-    max-height: 200px;
+    max-height: 250px;
   }
   .menu-mobile-nav.show .menu-mobile {
     display: block;
