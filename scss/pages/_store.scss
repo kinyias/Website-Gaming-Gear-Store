@@ -1,0 +1,138 @@
+@import '../component/header';
+@import '../component/footer';
+.shop-sidebar-inner {
+  border: 1px solid #f6f6f6;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 21px 22px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  .sidebar-inner-title {
+    h3 {
+      position: relative;
+      font-size: 23px;
+    }
+  }
+  .checkbox-list-brand,.checkbox-list-category,
+  .checkbox-list-price {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 0;
+    }
+    input[type='checkbox'] {
+      cursor: pointer;
+      color: #ffffff;
+      accent-color: $primary-color;
+      width: 20px;
+      height: 20px;
+    }
+    label {
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.product-list-store{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.product-item {
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  transition: 0.3s;
+  overflow: hidden;
+  &:hover {
+    border-color: $primary-color;
+    .product-caption {
+      .price-box {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      .btn-cart {
+        opacity: 1;
+      }
+    }
+  }
+  .product-thumb {
+    position: relative;
+  }
+  .product-caption {
+    position: relative;
+    padding: 22px 15px 26px;
+    .manufacture-product {
+      a {
+        color: #666;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: uppercase;
+      }
+    }
+    .product-name {
+      a {
+        white-space: initial;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+      }
+      h4 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        padding: 5px 0;
+        padding-bottom: 0;
+        transition: 0.3s;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    .price-box {
+      visibility: visible;
+      opacity: 1;
+      transition: 0.3s;
+
+      .old-price {
+        color: #666;
+        text-decoration: line-through;
+        font-size: 15px;
+      }
+      .regular-price {
+        font-weight: 600;
+      }
+    }
+    .btn-cart {
+      background: $primary-color;
+      border: medium none;
+      border-radius: 25px;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 36px;
+      margin-top: 10px;
+      padding: 0 25px;
+      text-transform: capitalize;
+      transition: 0.3s;
+      opacity: 0;
+      position: absolute;
+      bottom: 10px;
+      &:hover {
+        background: $secondary-color;
+      }
+    }
+  }
+}
+
+.sale{
+    color: $regular-price-sale;
+}
+
+@media (max-width: $mobile) {
+    .product-list-store{
+        grid-template-columns: 1fr 1fr;
+    }
+}

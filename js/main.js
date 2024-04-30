@@ -135,7 +135,7 @@ function generateCategories(listCategories) {
   listCategories.forEach((item) => {
     categories_list.innerHTML += `
     <li class="categories-item">
-    <a href="#"> ${item.name} </a>
+    <a href="store.html?idCategory=${item.id}"> ${item.name} </a>
    </li>
     `;
   });
@@ -161,7 +161,7 @@ function generatefeaturedCategoriesList(listCategories) {
         <div class="category-item">
         <div class="category-item-info">
           <h4 class="category-item-name">
-            <a href="#"> ${item.name} </a>
+            <a href="store.html?idCategory=${item.id}"> ${item.name} </a>
           </h4>
           <div class="total-items">${getCountProductsOfCategories(
             item.id
@@ -169,7 +169,7 @@ function generatefeaturedCategoriesList(listCategories) {
           <a href="" class="shop-btn">+ Xem thêm</a>
         </div>
         <div class="category-item-thumb">
-          <a href="#">
+          <a href="store.html?idCategory=${item.id}">
             <img
               src="${item.img}"
               alt="${item.name}"
@@ -396,7 +396,9 @@ function loadCartToHTML() {
       </a>
     </div>
     <div class="cart-info">
-      <h4><a href="product-detail.html?id=${product.id}">${product.name} </a></h4>
+      <h4><a href="product-detail.html?id=${product.id}">${
+      product.name
+    } </a></h4>
       <span
         >${item.quantity} x
         <span>${formatVND(product.price)}</span>
