@@ -141,7 +141,7 @@ function generateProductRelateList(listProducts, idCategory, idProduct) {
     });
     $(document.querySelector('.product-relate-list')).owlCarousel({
       loop: true,
-      margin: 30,
+      margin: 10,
       singleItem: true,
       items: 4,
       dots: false,
@@ -159,7 +159,7 @@ function generateProductRelateList(listProducts, idCategory, idProduct) {
           items: 2,
         },
         1000: {
-          items: 4,
+          items: 5,
         },
       },
     });

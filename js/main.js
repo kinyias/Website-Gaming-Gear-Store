@@ -5,6 +5,7 @@ const header_bottom = document.querySelector('.header-bottom');
 const menu_bar = document.querySelector('.menu-bar');
 const menu_close = document.querySelector('.menu-close');
 const menu_mobile_nav = document.querySelector('.menu-mobile-nav');
+const back_to_top = document.querySelector('.back-to-top');
 //generateSearchKey
 const messages = [
   'Bàn phím akko',
@@ -54,9 +55,17 @@ window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
   if (currentScroll > 150) {
     header_bottom.classList.add('sticky');
+    back_to_top.classList.add('active')
   } else {
     header_bottom.classList.remove('sticky');
+    back_to_top.classList.remove('active')
   }
+});
+$('.back-to-top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 800);
+  return false;
 });
 //Dong mo danh sach san pham
 categories_menu.addEventListener('click', function () {

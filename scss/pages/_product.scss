@@ -1,5 +1,3 @@
-@import '../component/header';
-@import '../component/footer';
 .product-detail {
   border-radius: 8px;
   border: 1px solid #f0f0f0;
@@ -269,5 +267,12 @@
         &-price{
             margin-top: 10px;
         }
+    }
+    .product-item {
+      .product-caption {
+        .btn-cart {
+          padding: 0 20px!important;
+        }
+      }
     }
 }
