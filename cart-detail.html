@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/Logo.png" type="image/x-icon" />
-    <title>Khang Store - Blog</title>
+    <title>Khang Store - Chi tiết giỏ hàng</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,7 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/blog.css" />
+    <link rel="stylesheet" href="./css/cart-detail.css" />
   </head>
   <body>
     <header class="header">
@@ -130,21 +130,109 @@
       </div>
     </header>
     <main>
-      <div class="blog-wrapper">
+      <div class="cart-detail">
         <div class="container">
           <div class="row">
-            <div class="col-lg-9 col-md-12 col-12">
-              <div class="blog-list-content">
-                <div class="heading-blog my-3"><h3>Tất cả bài viết</h3></div>
-                <div class="blog-list-blog row"></div>
+            <div class="col-lg-8 col-12">
+              <div class="main-cart-detail">
+                <div class="cart-detail-title"><h2>Giỏ hàng</h2></div>
+                <div class="list-pagefrom-cart">
+                  <form action="">
+                    <div class="cart-row">
+                      <p class="title-number-cart">
+                        Bạn đang có <strong> 4 sản phẩm </strong> trong giỏ hàng
+                      </p>
+                      <div class="table-cart">
+                        <div class="media-line-item line-item">
+                          <div class="media-left">
+                            <div class="item-img">
+                              <img
+                                src="./images/products/akko/product-1.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="item-remove"></div>
+                          </div>
+                          <div class="media-right">
+                            <div class="item-info">
+                              <a href="#">Bàn phím cơ Logitech G Pro X</a>
+                            </div>
+                            <div class="item-price">
+                              <span>2,290,00d</span>
+                              <del>2,590,00d</del>
+                            </div>
+                          </div>
+                          <div class="media-total">
+                            <div class="item-total-price">
+                              <span>6,590,000d</span>
+                            </div>
+                            <div class="item-qty">
+                              <div class="qty">
+                                <button type="button" class="btn-qty">-</button>
+                                <input
+                                  type="text"
+                                  class="quantity-input"
+                                  value="1"
+                                  min="1"
+                                />
+                                <button type="button" class="btn-qty">+</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="media-line-item line-item">
+                          <div class="media-left">
+                            <div class="item-img">
+                              <img
+                                src="./images/products/akko/product-1.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="item-remove"></div>
+                          </div>
+                          <div class="media-right">
+                            <div class="item-info">
+                              <a href="#">Bàn phím cơ Logitech G Pro X</a>
+                            </div>
+                            <div class="item-price">
+                              <span>2,290,00d</span>
+                              <del>2,590,00d</del>
+                            </div>
+                          </div>
+                          <div class="media-total">
+                            <div class="item-total-price">
+                              <span>6,590,000d</span>
+                            </div>
+                            <div class="item-qty">
+                              <div class="qty">
+                                <button type="button" class="btn-qty">-</button>
+                                <input
+                                  type="text"
+                                  class="quantity-input"
+                                  value="1"
+                                  min="1"
+                                />
+                                <button type="button" class="btn-qty">+</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-12 col-12">
-              <div class="sidebar-blog">
-                <div class="group-sidebox">
-                  <div class="side-title my-3"><h3>Bài viết mới nhất</h3></div>
-                  <div class="side-content">
-                    <ul class="blog-list-lastest"></ul>
+            <div class="col-lg-4 col-12">
+              <div class="order-summary-wrapper">
+                <div class="order-summary">
+                  <div class="summary-title">Thông tin đơn hàng</div>
+                  <div class="summary-total">
+                    <div class="summary-total-title">Tổng tiền:</div>
+                    <div class="summary-total-number">9,900,000d</div>
+                  </div>
+                  <div class="summary-button">
+                    <a href="payment.html" class="btn-checkout">Thanh toán</a>
                   </div>
                 </div>
               </div>
@@ -259,6 +347,5 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/main.js"></script>
-    <script src="./js/blog.js"></script>
   </body>
 </html>
