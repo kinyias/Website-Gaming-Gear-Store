@@ -43,7 +43,7 @@ function generateProductByIdQueryParam() {
   product_detail.innerHTML = `<div class="row">
   <div class="col-lg-4 col-12">
     <div class="product-detail-image">
-      <img src="${product.img}" alt="${product.name}" />
+      <img src="${product.img}" alt="${product.name}" class="zoom" />
     </div>
   </div>
   <div class="col-lg-5 col-12">
@@ -90,6 +90,10 @@ function generateProductByIdQueryParam() {
   description_content.innerHTML = product.description;
   generateProductRelateList(listProducts, product.category, product.id);
   toastMessage();
+  mediumZoom('.zoom', {
+    margin: 50,
+    background: '#000',
+  });
 }
 
 function generateProductRelateList(listProducts, idCategory, idProduct) {
