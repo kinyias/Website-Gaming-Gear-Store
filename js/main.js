@@ -382,7 +382,6 @@ function addToCart(productId) {
 function deleteCart(id) {
   let cart = JSON.parse(localStorage.getItem('cart'));
   cart = cart.filter((item) => item.productId != id);
-  console.log(cart);
   localStorage.setItem('cart', JSON.stringify(cart));
   loadCartToHTML();
 }

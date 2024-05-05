@@ -33,6 +33,21 @@
   .item-img {
     border: 1px solid #f0f0f0;
   }
+  .item-remove{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-30%,-30%);
+    padding: 3px;
+    background-color: $secondary-color;
+    cursor: pointer;
+    border-radius: 100%;
+    i{
+      display: flex;
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
 }
 .media-right {
   flex: 1 1 auto;
@@ -47,6 +62,10 @@
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       display: -webkit-box;
+      transition: .3s;
+      &:hover{
+        color: $primary-color;
+      }
     }
   }
   .item-price {
