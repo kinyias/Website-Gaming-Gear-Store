@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="col-lg-7 col-md-12 col-12">
-              <form action="" class="frm-search">
+              <form action="" class="frm-search" method="post">
                 <div class="search-bar d-flex">
                   <input
                     class="search"
@@ -157,6 +157,8 @@
                         id="name"
                         placeholder="Tên"
                         required
+                        oninvalid="setCustomValidity('Vui lòng điền tên của bạn')" 
+                        oninput="setCustomValidity('')" 
                       />
                     </div>
                     <div
@@ -169,6 +171,8 @@
                         id="phone"
                         placeholder="+84"
                         required
+                        oninvalid="setCustomValidity('Vui lòng điền số điện thoại của bạn')" 
+                        oninput="setCustomValidity('')" 
                       />
                     </div>
                     <div
@@ -181,6 +185,8 @@
                         id="email"
                         placeholder="example@gmail.com"
                         required
+                        oninvalid="setCustomValidity('Vui lòng điền email của bạn')" 
+                        oninput="setCustomValidity('')" 
                       />
                     </div>
                     <div
@@ -202,7 +208,8 @@
                         rows="10"
                         placeholder="Lời nhắn"
                         minlength="20"
-                        required
+                        required oninvalid="setCustomValidity('Vui lòng điền lời nhắn của bạn')" 
+                        oninput="setCustomValidity('')" 
                       ></textarea>
                     </div>
                     <div class="col-12 text-center">
@@ -237,6 +244,9 @@
                       name=""
                       id="mc-email"
                       placeholder="Nhập địa chỉ email của bạn"
+                      required
+                      oninvalid="setCustomValidity('Vui lòng điền email của bạn')"
+                      oninput="setCustomValidity('')"
                     />
                     <button class="btn-newsletter" type="submit" id="mc-submit">
                       Đăng kí
@@ -324,5 +334,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/main.js"></script>
+    <script src="./js/contact.js"></script>
   </body>
 </html>

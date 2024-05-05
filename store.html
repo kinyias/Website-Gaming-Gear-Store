@@ -258,6 +258,9 @@
                       name=""
                       id="mc-email"
                       placeholder="Nhập địa chỉ email của bạn"
+                      required
+                      oninvalid="setCustomValidity('Vui lòng điền email của bạn')"
+                      oninput="setCustomValidity('')"
                     />
                     <button class="btn-newsletter" type="submit" id="mc-submit">
                       Đăng kí

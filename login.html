@@ -162,6 +162,8 @@
                           id="email"
                           placeholder="Email"
                           required
+                          oninvalid="setCustomValidity('Vui lòng điền email của bạn')"
+                          oninput="setCustomValidity('')"
                         />
                       </div>
                     </div>
@@ -178,6 +180,8 @@
                           id="password"
                           placeholder="Mật khẩu"
                           required
+                          oninvalid="setCustomValidity('Vui lòng điền mật khẩu của bạn')"
+                          oninput="setCustomValidity('')"
                         />
                       </div>
                       <p
@@ -226,6 +230,9 @@
                       name=""
                       id="mc-email"
                       placeholder="Nhập địa chỉ email của bạn"
+                      required
+                      oninvalid="setCustomValidity('Vui lòng điền email của bạn')"
+                      oninput="setCustomValidity('')"
                     />
                     <button class="btn-newsletter" type="submit" id="mc-submit">
                       Đăng kí
@@ -313,6 +320,5 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./js/main.js"></script>
-    <script src="./js/validatePassword.js"></script>
   </body>
 </html>

@@ -101,6 +101,14 @@ function formatVND(number) {
     .replaceAll('.', ',');
   return formatted_number;
 }
+
+function numberValidation(n) { 
+  if (isNaN(n)) { 
+      return false; 
+  } else { 
+      return true; 
+  } 
+} 
 //Add toast animation
 function toastMessage() {
   const btn_carts = document.querySelectorAll('.btn-cart');
