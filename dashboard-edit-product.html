@@ -107,55 +107,93 @@
         <div class="main-content">
           <div class="main-content-inner">
             <div class="add-product-wrapper">
-                <div class="add-product">
-                    <form action="" class="frm-add-product">
-                        <div class="frm-product-left">
-                            <div class="frm-title"><h4>Thêm sản phẩm</h4></div>
-                            <div class="frm-field">
-                                <label for="name">Tên sản phẩm:</label>
-                                <input type="text"  id="name" name="name" placeholder="Tên sản phẩm" required>
-                            </div>
-                            <div class="frm-group-flex">
-                                <div class="frm-field">
-                                    <label for="name">Giá bán:</label>
-                                    <input type="text"  id="name" name="name" placeholder="Giá bán" required>
-                                </div>
-                                <div class="frm-field">
-                                    <label for="name">Giá khuyến mãi:</label>
-                                    <input type="text"  id="name" name="name" placeholder="Giá khuyến mãi">
-                                </div>
-                                <div class="frm-field">
-                                    <label for="name">Danh mục sản phẩm:</label>
-                                    <input type="text"  id="name" name="name" placeholder="Tên sản phẩm">
-                                </div>
-                            </div>
-                            <div class="frm-field">
-                                <label for="name">Mô tả sản phẩm:</label>
-                                <div id="editor">This is some sample content.</div>
-                            </div>  
+              <div class="add-product">
+                <form action="" class="frm-add-product">
+                  <div class="frm-product-left">
+                    <div class="frm-title"><h4>Thêm sản phẩm</h4></div>
+                    <div class="frm-field">
+                      <label for="name">Tên sản phẩm:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Tên sản phẩm"
+                        required
+                        oninvalid="setCustomValidity('Vui lòng điền tên sản phẩm')"
+                        oninput="setCustomValidity('')"
+                      />
+                    </div>
+                    <div class="frm-group-flex">
+                      <div class="frm-field">
+                        <label for="price">Giá bán:</label>
+                        <input
+                          type="text"
+                          id="price"
+                          name="price"
+                          placeholder="Giá bán"
+                          required
+                          oninvalid="setCustomValidity('Vui lòng điền giá bán')"
+                          oninput="setCustomValidity('')"
+                        />
+                      </div>
+                      <div class="frm-field">
+                        <label for="price-sale">Giá khuyến mãi:</label>
+                        <input
+                          type="text"
+                          id="price-sale"
+                          name="price-sale"
+                          placeholder="Giá khuyến mãi"
+                        />
+                      </div>
+                      <div class="frm-field">
+                        <label for="name">Danh mục sản phẩm:</label>
+                        <select class="form-select p-2">
+                          <option value="Chuột chơi game" selected>
+                            Chuột chơi game
+                          </option>
+                          <option value="Bàn phím cơ">Bàn phím cơ</option>
+                          <option value="Tai nghe gaming">
+                            Tai nghe gaming
+                          </option>
+                          <option value="Tay cầm chơi game">
+                            Tay cầm chơi game
+                          </option>
+                          <option value="Bàn ghế chơi game">
+                            Bàn ghế chơi game
+                          </option>
+                          <option value="Màn hình chơi game">
+                            Màn hình chơi game
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="frm-field">
+                      <label for="name">Mô tả sản phẩm:</label>
+                      <div id="editor">Mô tả sản phẩm</div>
+                    </div>
+                  </div>
+                  <div class="frm-product-right">
+                    <div class="frm-title"><h4>Hình ảnh</h4></div>
+                    <div class="imageUpload">
+                      <div class="imageUpload-inner">
+                        <div class="imageUpload-icon">
+                          <i class="bi bi-arrow-up-circle-fill"></i>
                         </div>
-                        <div class="frm-product-right">
-                            <div class="frm-title"><h4>Hình ảnh</h4></div>
-                            <div class="imageUpload">
-                                <div class="imageUpload-inner">
-                                    <div class="imageUpload-icon">
-                                        <i class="bi bi-arrow-up-circle-fill"></i>
-                                    </div>
-                                    <button type="button" class="btn-upload">
-                                        Tải lên
-                                    </button>
-                                    <input type="file" id="file">
-                                    <div class="imageUpload-description">
-                                        click để tải hình ảnh lên
-                                    </div>
-                                    <div class="pic-uploaded">
-                                        <img src="" alt="" class="image-uploaded">
-                                    </div>
-                                </div>
-                            </div>
+                        <button type="button" class="btn-upload">
+                          Tải lên
+                        </button>
+                        <input type="file" id="file" />
+                        <div class="imageUpload-description">
+                          click để tải hình ảnh lên
                         </div>
-                    </form>
-                </div>
+                        <div class="pic-uploaded">
+                          <img src="" alt="" class="image-uploaded" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -177,6 +215,6 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
     <script src="./js/dashboard.js"></script>
     <script src="./js/ckeditor.js"></script>
-   
+    <script src="./js/dashboard-edit-product.js"></script>
   </body>
 </html>
