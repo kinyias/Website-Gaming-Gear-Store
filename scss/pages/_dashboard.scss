@@ -84,73 +84,178 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    .sales-product,.orders-total {
+    .sales-product,
+    .orders-total {
       padding: 20px;
       width: 65%;
       border-radius: 8px;
       border: 1px solid #f0f0f0;
     }
-    .orders-total{
+    .orders-total {
       width: 35%;
     }
   }
-  .report-dashboard{
+  .report-dashboard {
     margin-top: 20px;
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    .report-sales-daily, .report-profit, .report-order-month{
+    .report-sales-daily,
+    .report-profit,
+    .report-order-month {
       width: 33.333333%;
       border-radius: 8px;
       border: 1px solid #f0f0f0;
       padding: 10px;
     }
-    .report-title{
+    .report-title {
       font-size: 22px;
       font-weight: 500;
     }
   }
 }
 
-.menu-bar{
+.add-product-wrapper {
+  .frm-add-product {
+    display: flex;
+    gap: 10px;
+    label {
+      padding: 5px 0;
+      display: block;
+    }
+    input {
+      padding: 0.5rem 1.2rem;
+      display: block;
+      flex: 1 1;
+      display: block;
+      width: 100%;
+      position: relative;
+      z-index: 10;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      margin: 1px;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+  .frm-product-left,
+  .frm-product-right {
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+  }
+  .frm-group-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .frm-product-left {
+    width: 70%;
+  }
+  .frm-product-right {
+    width: 30%;
+  }
+  .imageUpload{
+    margin: 10px;
+    &-inner{
+      border: 3px dashed #666;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 30px 0;
+      position: relative;
+      overflow: hidden;
+      i{
+        font-size: 25px;
+        color: #555;
+      }
+    }
+  }
+  .btn-upload{
+    display: inline-block;
+    position: relative;
+    border: 1px solid #babfc3;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-weight: 600;
+    color: inherit;
+    background-color: #fff;
+    border-top-color: #c9cccf;
+    border-bottom-color: #babfc4;
+  }
+  #file{
+    display: none;
+  }
+  .pic-uploaded{
+    position: absolute;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.menu-bar {
   display: none;
 }
 
 @media (max-width: $mobile) {
-  .logo{
+  .logo {
     display: flex;
     align-items: center;
   }
-  .admin-navigation{
+  .admin-navigation {
+    background-color: #fff;
     transform: translateX(-100%);
+    transition: 0.3s;
   }
-  .menu-bar{
+  .admin-navigation.show {
+    transform: translateX(0);
+  }
+  .menu-bar {
     display: inline-block;
   }
-  .main-content{
+  .main-content {
     margin: 0;
     margin-top: 90px;
-    &-inner{
+    &-inner {
       padding: 0 20px;
     }
-    .report-sales{
+    .report-sales {
       flex-direction: column;
     }
-    .sales-product, .orders-total{
-      width: 100%!important;
+    .sales-product,
+    .orders-total {
+      width: 100% !important;
     }
   }
-  .report-dashboard{
+  .report-dashboard {
     flex-direction: column;
-    .report-sales-daily, .report-profit, .report-order-month{
-      width: 100%!important;
+    .report-sales-daily,
+    .report-profit,
+    .report-order-month {
+      width: 100% !important;
     }
-    .report-profit{
+    .report-profit {
       margin-bottom: 100px;
     }
-    .report-title{
+    .report-title {
       font-size: 22px;
       font-weight: 500;
+    }
+  }
+  .add-product-wrapper{
+    .frm-add-product{
+      flex-direction: column;
+    }
+    .frm-product-left, .frm-product-right{
+      width: 100%!important;
+    }
+    .frm-group-flex{
+      grid-template-columns: 1fr;
     }
   }
 }

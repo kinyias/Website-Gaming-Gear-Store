@@ -43,13 +43,13 @@
                 <li class="root-nav-item">
                   <div class="nav-item-title">CHUNG</div>
                   <ul class="item-group">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                       <a href="dashboard.html">
                         <i class="bi bi-speedometer2"></i>
                         Dashboard
                       </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                       <a href="dashboard-add-product.html">
                         <i class="bi bi-plus-square"></i>
                         Thêm sản phẩm
@@ -106,30 +106,56 @@
         </div>
         <div class="main-content">
           <div class="main-content-inner">
-            <div class="report-sales">
-              <div class="sales-product">
-                <div class="sales-product-title"><h2>Doanh số bán hàng</h2></div>
-                <canvas id="chartSalesProduct" style="max-height:500px;width:100%;max-width:100%"></canvas>
-              </div>
-              <div class="orders-total">
-                <div class="orders-total-title"><h2>Tổng đơn hàng</h2></div>
-                <canvas id="chartOrdersTotal" style="max-height:500px;width:100%;max-width:100%"></canvas>
-              </div>
-            </div>
-            <div class="report-dashboard">
-              <div class="report-sales-daily">
-                <span class="report-title">Doanh số hằng ngày</span>
-                <canvas id="chartSalesDaily" style="max-height:500px;width:100%;max-width:100%"></canvas>
-              </div>
-              <div class="report-order-month">
-                <span class="report-title">54 đơn hàng</span>
-                <p>Đơn hàng tháng này</p>
-                <canvas id="chartOrderMonthly" style="max-height:500px;width:100%;max-width:100%"></canvas>
-              </div>
-              <div class="report-profit">
-                <span class="report-title">Lợi nhuận</span>
-                <canvas id="chartProfit" style="max-height:500px;width:100%;max-width:100%"></canvas>
-              </div>
+            <div class="add-product-wrapper">
+                <div class="add-product">
+                    <form action="" class="frm-add-product">
+                        <div class="frm-product-left">
+                            <div class="frm-title"><h4>Thêm sản phẩm</h4></div>
+                            <div class="frm-field">
+                                <label for="name">Tên sản phẩm:</label>
+                                <input type="text"  id="name" name="name" placeholder="Tên sản phẩm" required>
+                            </div>
+                            <div class="frm-group-flex">
+                                <div class="frm-field">
+                                    <label for="name">Giá bán:</label>
+                                    <input type="text"  id="name" name="name" placeholder="Giá bán" required>
+                                </div>
+                                <div class="frm-field">
+                                    <label for="name">Giá khuyến mãi:</label>
+                                    <input type="text"  id="name" name="name" placeholder="Giá khuyến mãi">
+                                </div>
+                                <div class="frm-field">
+                                    <label for="name">Danh mục sản phẩm:</label>
+                                    <input type="text"  id="name" name="name" placeholder="Tên sản phẩm">
+                                </div>
+                            </div>
+                            <div class="frm-field">
+                                <label for="name">Mô tả sản phẩm:</label>
+                                <div id="editor">This is some sample content.</div>
+                            </div>  
+                        </div>
+                        <div class="frm-product-right">
+                            <div class="frm-title"><h4>Hình ảnh</h4></div>
+                            <div class="imageUpload">
+                                <div class="imageUpload-inner">
+                                    <div class="imageUpload-icon">
+                                        <i class="bi bi-arrow-up-circle-fill"></i>
+                                    </div>
+                                    <button type="button" class="btn-upload">
+                                        Tải lên
+                                    </button>
+                                    <input type="file" id="file">
+                                    <div class="imageUpload-description">
+                                        click để tải hình ảnh lên
+                                    </div>
+                                    <div class="pic-uploaded">
+                                        <img src="" alt="" class="image-uploaded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
           </div>
         </div>
@@ -147,11 +173,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <!-- Chartjs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-    <script src="./js/chartjs.js"></script>
+    <!-- CKEditor 5 -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
     <script src="./js/dashboard.js"></script>
+    <script src="./js/ckeditor.js"></script>
+   
   </body>
 </html>
