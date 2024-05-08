@@ -15,6 +15,7 @@
 - Medium zoom
 - ToastJS
 - Chartjs
+- CKeditor 5
 
 ## Demo:
 
