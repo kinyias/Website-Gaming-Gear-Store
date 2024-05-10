@@ -55,16 +55,19 @@ window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
   if (currentScroll > 150) {
     header_bottom.classList.add('sticky');
-    back_to_top.classList.add('active')
+    back_to_top.classList.add('active');
   } else {
     header_bottom.classList.remove('sticky');
-    back_to_top.classList.remove('active')
+    back_to_top.classList.remove('active');
   }
 });
-$('.back-to-top').click(function() {
-  $('html, body').animate({
-    scrollTop: 0
-  }, 800);
+$('.back-to-top').click(function () {
+  $('html, body').animate(
+    {
+      scrollTop: 0,
+    },
+    800
+  );
   return false;
 });
 //Dong mo danh sach san pham
@@ -102,13 +105,13 @@ function formatVND(number) {
   return formatted_number;
 }
 
-function numberValidation(n) { 
-  if (isNaN(n)) { 
-      return false; 
-  } else { 
-      return true; 
-  } 
-} 
+function numberValidation(n) {
+  if (isNaN(n)) {
+    return false;
+  } else {
+    return true;
+  }
+}
 //Add toast animation
 function toastMessage() {
   const btn_carts = document.querySelectorAll('.btn-cart');
@@ -359,21 +362,22 @@ function getProductById(id) {
 }
 
 function addToCart(productId) {
-  console.log(productId);
   let cart = JSON.parse(localStorage.getItem('cart'));
   positionInCart = cart.findIndex((item) => item.productId == productId);
+  const input_quantity = document.getElementById('quantity');
+  const quantity = input_quantity ? Number(input_quantity.value) : 1;
   if (cart.length <= 0) {
     cart.push({
       productId: productId,
-      quantity: 1,
+      quantity: quantity,
     });
   } else if (positionInCart < 0) {
     cart.push({
       productId: productId,
-      quantity: 1,
+      quantity: quantity,
     });
   } else {
-    cart[positionInCart].quantity += 1;
+    cart[positionInCart].quantity += quantity;
   }
   localStorage.setItem('cart', JSON.stringify(cart));
   loadCartToHTML();

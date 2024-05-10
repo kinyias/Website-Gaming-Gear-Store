@@ -84,6 +84,15 @@
       border: 1px solid $primary-color;
       color: #fff;
       transition: 0.3s;
+      a{
+        color: #fff;
+        &:active{
+          color: #fff;
+        }
+        &:link{
+          color: #fff;
+        }
+      }
     }
   }
 }
@@ -261,7 +270,12 @@
 .sale{
     color: $regular-price-sale;
 }
-
+.medium-zoom--opened .medium-zoom-overlay {
+  z-index: 999;
+}
+.medium-zoom-overlay + img{
+  z-index: 999;
+}
 @media (max-width: $mobile) {
     .product-detail{
         &-price{

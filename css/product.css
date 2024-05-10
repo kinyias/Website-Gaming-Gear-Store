@@ -87,6 +87,15 @@
   color: #fff;
   transition: 0.3s;
 }
+.product-detail-addToCart .btn-buynow a {
+  color: #fff;
+}
+.product-detail-addToCart .btn-buynow a:active {
+  color: #fff;
+}
+.product-detail-addToCart .btn-buynow a:link {
+  color: #fff;
+}
 
 .product-detail-description {
   border: 1px solid #f0f0f0;
@@ -259,6 +268,14 @@
 
 .sale {
   color: #fe4f19;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  z-index: 999;
+}
+
+.medium-zoom-overlay + img {
+  z-index: 999;
 }
 
 @media (max-width: 576px) {

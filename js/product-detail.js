@@ -81,7 +81,7 @@ function generateProductByIdQueryParam() {
           <button class="btn btn-cart" onclick="addToCart(${
             product.id
           })">Thêm vào giỏ</button>
-          <button class="btn btn-buynow">Mua ngay</button>
+          <button class="btn btn-buynow"><a href="cart-detail.html">Mua ngay</a></button>
         </div>
       </div>
     </div>
