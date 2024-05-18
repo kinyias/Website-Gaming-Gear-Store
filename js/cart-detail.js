@@ -1,6 +1,5 @@
-
 function initCartDetail() {
-  fetch('../data/Products.json')
+  fetch('./data/Products.json')
     .then((response) => response.json())
     .then((response) => {
       listProducts = response;
@@ -22,11 +21,11 @@ function getProductById(id) {
   return listProducts.find((item) => item.id == id);
 }
 function deleteCart(id) {
-    let cart = JSON.parse(localStorage.getItem('cart'));
-    cart = cart.filter((item) => item.productId != id);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    loadCartDetail();
-  }
+  let cart = JSON.parse(localStorage.getItem('cart'));
+  cart = cart.filter((item) => item.productId != id);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCartDetail();
+}
 function loadCartDetail() {
   if (!localStorage.getItem('cart')) {
     localStorage.setItem('cart', '[]');
@@ -73,14 +72,18 @@ function loadCartDetail() {
         </div>
         <div class="item-qty">
           <div class="qty">
-            <button type="button" onclick="minusQuantity(${item.productId})" class="btn-qty">-</button>
+            <button type="button" onclick="minusQuantity(${
+              item.productId
+            })" class="btn-qty">-</button>
             <input
               type="text"
               class="quantity-input"
               value="${item.quantity}"
               min="1"
             />
-            <button type="button" onclick="plusQuantity(${item.productId})" class="btn-qty">+</button>
+            <button type="button" onclick="plusQuantity(${
+              item.productId
+            })" class="btn-qty">+</button>
           </div>
         </div>
       </div>
@@ -92,18 +95,18 @@ function loadCartDetail() {
 }
 
 function minusQuantity(id) {
-    let cart = JSON.parse(localStorage.getItem('cart'));
-    if(cart[cart.findIndex(item => item.productId == id)].quantity > 1)
-    cart[cart.findIndex(item => item.productId == id)].quantity -= 1
-    localStorage.setItem('cart', JSON.stringify(cart));
-    loadCartDetail()
+  let cart = JSON.parse(localStorage.getItem('cart'));
+  if (cart[cart.findIndex((item) => item.productId == id)].quantity > 1)
+    cart[cart.findIndex((item) => item.productId == id)].quantity -= 1;
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCartDetail();
 }
 
 function plusQuantity(id) {
-    let cart = JSON.parse(localStorage.getItem('cart'));
-    cart[cart.findIndex(item => item.productId == id)].quantity += 1
-    localStorage.setItem('cart', JSON.stringify(cart));
-    loadCartDetail()
+  let cart = JSON.parse(localStorage.getItem('cart'));
+  cart[cart.findIndex((item) => item.productId == id)].quantity += 1;
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCartDetail();
 }
 
 initCartDetail();

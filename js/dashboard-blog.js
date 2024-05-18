@@ -1,15 +1,15 @@
 function initDashBoardProduct() {
-    fetch('../data/Blogs.json')
-      .then((response) => response.json())
-      .then((response) => {
-        listBlogs = response;
-        generateBlogsDashBoard();
-      });
-  }
-function generateBlogsDashBoard(){
-    const table_body = document.getElementById('table-body')
-    listBlogs.forEach((item)=>{
-        table_body.innerHTML +=`
+  fetch('./data/Blogs.json')
+    .then((response) => response.json())
+    .then((response) => {
+      listBlogs = response;
+      generateBlogsDashBoard();
+    });
+}
+function generateBlogsDashBoard() {
+  const table_body = document.getElementById('table-body');
+  listBlogs.forEach((item) => {
+    table_body.innerHTML += `
         <tr>
                       <td>
                         <div class="product-image">
@@ -33,8 +33,8 @@ function generateBlogsDashBoard(){
                           <i class="bi bi-x"></i>
                         </button>
                       </td>
-                    </tr>`
-    })
+                    </tr>`;
+  });
 }
 
-initDashBoardProduct()
+initDashBoardProduct();

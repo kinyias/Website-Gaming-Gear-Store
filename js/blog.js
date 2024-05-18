@@ -1,6 +1,6 @@
 listBlogs = [];
 function initBlog() {
-  fetch('../data/Blogs.json')
+  fetch('./data/Blogs.json')
     .then((response) => response.json())
     .then((data) => {
       listBlogs = data;

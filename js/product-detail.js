@@ -1,5 +1,5 @@
 function initProductDetail() {
-  fetch('../data/Products.json')
+  fetch('./data/Products.json')
     .then((response) => response.json())
     .then((response) => {
       listProducts = response;

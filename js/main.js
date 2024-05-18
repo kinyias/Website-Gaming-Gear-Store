@@ -23,13 +23,13 @@ let listProducts = [];
 let listCategories = [];
 let listBlogs = [];
 function initApp() {
-  const request1 = fetch('../data/Products.json').then((response) =>
+  const request1 = fetch('./data/Products.json').then((response) =>
     response.json()
   );
-  const request2 = fetch('../data/Categories.json').then((response) =>
+  const request2 = fetch('./data/Categories.json').then((response) =>
     response.json()
   );
-  const request3 = fetch('../data/Blogs.json').then((response) =>
+  const request3 = fetch('./data/Blogs.json').then((response) =>
     response.json()
   );
   Promise.all([request1, request2, request3])

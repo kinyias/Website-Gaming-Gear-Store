@@ -1,8 +1,8 @@
 function initStore() {
-  const request1 = fetch('../data/Products.json').then((response) =>
+  const request1 = fetch('./data/Products.json').then((response) =>
     response.json()
   );
-  const request2 = fetch('../data/Categories.json').then((response) =>
+  const request2 = fetch('./data/Categories.json').then((response) =>
     response.json()
   );
   Promise.all([request1, request2])
