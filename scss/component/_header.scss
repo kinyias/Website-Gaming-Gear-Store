@@ -282,11 +282,19 @@
       display: flex;
       &-item {
         position: relative;
+        background-color: $primary-color;
+        &:hover{
+          filter: brightness(110%)
+        }
         a {
           display: block;
           color: #ffffff;
           padding: 20px;
           text-transform: uppercase;
+          transition: .3s;
+          &:hover{
+            color: #000;
+          }
         }
       }
     }

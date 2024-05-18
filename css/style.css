@@ -282,12 +282,20 @@
 }
 .header-bottom .nav-menu .menu-item {
   position: relative;
+  background-color: #23b55c;
+}
+.header-bottom .nav-menu .menu-item:hover {
+  filter: brightness(110%);
 }
 .header-bottom .nav-menu .menu-item a {
   display: block;
   color: #ffffff;
   padding: 20px;
   text-transform: uppercase;
+  transition: 0.3s;
+}
+.header-bottom .nav-menu .menu-item a:hover {
+  color: #000;
 }
 
 .menu-bar, .menu-close {
