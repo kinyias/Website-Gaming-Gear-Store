@@ -30,7 +30,7 @@
           </a>
         </div>
         <div class="admin-user">
-          <img src="./images/avatar-admin.png" alt="avatar-admin" />
+          Xin chào, <strong>admin</strong> <img src="./images/avatar-admin.png" alt="avatar-admin" />
         </div>
       </div>
     </header>
@@ -87,13 +87,13 @@
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="dashboard-users.html">
+                      <a href="#">
                         <i class="bi bi-people-fill"></i>
                         Người dùng
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="dashboard-orders.html">
+                      <a href="#">
                         <i class="bi bi-box"></i>
                         Đơn hàng
                       </a>
@@ -108,27 +108,44 @@
           <div class="main-content-inner">
             <div class="report-sales">
               <div class="sales-product">
-                <div class="sales-product-title"><h2>Doanh số bán hàng</h2></div>
-                <canvas id="chartSalesProduct" style="max-height:500px;width:100%;max-width:100%"></canvas>
+                <div class="sales-product-title">
+                  <h2>Doanh số bán hàng</h2>
+                </div>
+                <canvas
+                  id="chartSalesProduct"
+                  style="max-height: 500px; width: 100%; max-width: 100%"
+                ></canvas>
               </div>
               <div class="orders-total">
                 <div class="orders-total-title"><h2>Tổng đơn hàng</h2></div>
-                <canvas id="chartOrdersTotal" style="max-height:500px;width:100%;max-width:100%"></canvas>
+                <canvas
+                  id="chartOrdersTotal"
+                  style="max-height: 500px; width: 100%; max-width: 100%"
+                ></canvas>
               </div>
             </div>
             <div class="report-dashboard">
               <div class="report-sales-daily">
                 <span class="report-title">Doanh số hằng ngày</span>
-                <canvas id="chartSalesDaily" style="max-height:500px;width:100%;max-width:100%"></canvas>
+                <canvas
+                  id="chartSalesDaily"
+                  style="max-height: 500px; width: 100%; max-width: 100%"
+                ></canvas>
               </div>
               <div class="report-order-month">
                 <span class="report-title">54 đơn hàng</span>
                 <p>Đơn hàng tháng này</p>
-                <canvas id="chartOrderMonthly" style="max-height:500px;width:100%;max-width:100%"></canvas>
+                <canvas
+                  id="chartOrderMonthly"
+                  style="max-height: 500px; width: 100%; max-width: 100%"
+                ></canvas>
               </div>
               <div class="report-profit">
                 <span class="report-title">Lợi nhuận</span>
-                <canvas id="chartProfit" style="max-height:500px;width:100%;max-width:100%"></canvas>
+                <canvas
+                  id="chartProfit"
+                  style="max-height: 500px; width: 100%; max-width: 100%"
+                ></canvas>
               </div>
             </div>
           </div>

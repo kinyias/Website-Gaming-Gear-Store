@@ -145,10 +145,10 @@
           <div class="row">
             <div class="col-12">
               <div class="contact-message">
-                <form action="" class="frm-contact">
+                <form class="frm-contact" onsubmit="return false;">
                   <div class="row">
                     <div
-                      class="col-lg-6 col-md-6 col-sm-6 d-flex align-items-center justify-content-between mb-3"
+                      class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-between mb-3"
                     >
                       <label for="name">Tên: </label>
                       <input
@@ -162,7 +162,7 @@
                       />
                     </div>
                     <div
-                      class="col-lg-6 col-md-6 col-sm-6 d-flex align-items-center justify-content-between mb-3"
+                      class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-between mb-3"
                     >
                       <label for="phone">Số điện thoại: </label>
                       <input
@@ -176,7 +176,7 @@
                       />
                     </div>
                     <div
-                      class="col-lg-6 col-md-6 col-sm-6 d-flex align-items-center justify-content-between mb-3"
+                      class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-between mb-3"
                     >
                       <label for="email">Email: </label>
                       <input
@@ -190,7 +190,7 @@
                       />
                     </div>
                     <div
-                      class="col-lg-6 col-md-6 col-sm-6 d-flex align-items-center justify-content-between mb-3"
+                      class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-between mb-3"
                     >
                       <label for="subject">Tiêu đề: </label>
                       <input
@@ -201,10 +201,10 @@
                       />
                     </div>
                     <div class="col-12">
-                      <label for="subject">Lời nhắn: </label> <br />
+                      <label for="message">Lời nhắn: </label> <br />
                       <textarea
-                        name="subject"
-                        id="subject"
+                        name="message"
+                        id="message"
                         rows="10"
                         placeholder="Lời nhắn"
                         minlength="20"
@@ -214,13 +214,58 @@
                       ></textarea>
                     </div>
                     <div class="col-12 text-center">
-                      <button class="btn btn-contact" type="submit">
+                      <button
+                        class="btn btn-contact"
+                        id="btn-submit"
+                        type="submit"
+                      >
                         Gửi lời nhắn
                       </button>
                     </div>
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        id="btnModal"
+        style="display: none"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#modal"
+      >
+        Launch demo modal
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modal"
+        tabindex="-1"
+        aria-labelledby="modalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalLabel">THÀNH CÔNG</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body w-100 d-flex justify-content-center align-items-center flex-column"><img src="./images/success.gif" style="width: 200px;" alt="success">
+            <h3>Gửi thông tin thành công</h3></div>
+            <div class="modal-footer w-100 d-flex justify-content-center">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                OK
+              </button>
             </div>
           </div>
         </div>

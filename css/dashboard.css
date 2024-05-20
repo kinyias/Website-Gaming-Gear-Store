@@ -51,6 +51,11 @@
   background-color: #23b55c;
 }
 
+.admin-user {
+  cursor: pointer;
+  user-select: none;
+}
+
 .nav-list .root-nav-item .nav-item-title {
   margin: 10px;
   margin-bottom: 0;
@@ -99,7 +104,7 @@
   overflow: hidden;
 }
 .main-content-inner {
-  padding: 30px 300px;
+  padding: 30px 10%;
 }
 .main-content .report-sales {
   display: flex;
@@ -178,6 +183,7 @@
   margin: 10px;
 }
 .add-product-wrapper .imageUpload-inner {
+  height: 300px;
   border: 3px dashed #666;
   border-radius: 8px;
   display: flex;
@@ -259,11 +265,86 @@
   justify-content: flex-start;
   align-items: center;
 }
+.product-td a {
+  transition: 0.3s;
+}
+.product-td a:hover {
+  color: #23b55c;
+}
 
 .menu-bar {
   display: none;
 }
 
+.table .modal-dialog {
+  background-color: transparent;
+}
+
+.modal {
+  transform: scale(0);
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.modal.show {
+  transform: scale(1);
+}
+
+@media (max-width: 992px) {
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .admin-navigation {
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 0.3s;
+  }
+  .admin-navigation.show {
+    transform: translateX(0);
+  }
+  .menu-bar {
+    display: inline-block;
+  }
+  .main-content {
+    margin: 0;
+    margin-top: 90px;
+  }
+  .main-content-inner {
+    padding: 0 20px;
+  }
+  .main-content .report-sales {
+    flex-direction: column;
+  }
+  .main-content .sales-product,
+  .main-content .orders-total {
+    width: 100% !important;
+  }
+  .report-dashboard {
+    flex-direction: column;
+  }
+  .report-dashboard .report-sales-daily,
+  .report-dashboard .report-profit,
+  .report-dashboard .report-order-month {
+    width: 100% !important;
+  }
+  .report-dashboard .report-profit {
+    margin-bottom: 100px;
+  }
+  .report-dashboard .report-title {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .add-product-wrapper .frm-add-product {
+    flex-direction: column;
+  }
+  .add-product-wrapper .frm-product-left, .add-product-wrapper .frm-product-right {
+    width: 100% !important;
+  }
+  .add-product-wrapper .frm-group-flex {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 576px) {
   .logo {
     display: flex;

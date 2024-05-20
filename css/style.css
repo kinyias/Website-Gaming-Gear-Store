@@ -283,6 +283,7 @@
 .header-bottom .nav-menu .menu-item {
   position: relative;
   background-color: #23b55c;
+  transition: 0.3s;
 }
 .header-bottom .nav-menu .menu-item:hover {
   filter: brightness(110%);
@@ -295,7 +296,7 @@
   transition: 0.3s;
 }
 .header-bottom .nav-menu .menu-item a:hover {
-  color: #000;
+  color: #fafafa;
 }
 
 .menu-bar, .menu-close {

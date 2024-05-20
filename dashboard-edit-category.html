@@ -30,6 +30,7 @@
           </a>
         </div>
         <div class="admin-user">
+          Xin chào, <strong>admin</strong>
           <img src="./images/avatar-admin.png" alt="avatar-admin" />
         </div>
       </div>
@@ -87,13 +88,13 @@
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="dashboard-users.html">
+                      <a href="#">
                         <i class="bi bi-people-fill"></i>
                         Người dùng
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="dashboard-orders.html">
+                      <a href="#">
                         <i class="bi bi-box"></i>
                         Đơn hàng
                       </a>
@@ -107,41 +108,51 @@
         <div class="main-content">
           <div class="main-content-inner">
             <div class="add-product-wrapper">
-                <div class="add-product">
-                    <form action="" class="frm-add-product">
-                        <div class="frm-product-left">
-                            <div class="frm-title"><h4>Thêm danh mục</h4></div>
-                            <div class="frm-field">
-                                <label for="name">Tên danh mục:</label>
-                                <input type="text"  id="name" name="name" placeholder="Tên danh mục" required>
-                            </div>
-                            <div class="frm-field">
-                                <label for="name">Mô tả danh mục:</label>
-                                <div id="editor">Mô tả danh mục</div>
-                            </div>  
+              <div class="add-product">
+                <form action="" class="frm-add-product">
+                  <div class="frm-product-left">
+                    <div class="frm-title"><h4>Thêm danh mục</h4></div>
+                    <div class="frm-field">
+                      <label for="name">Tên danh mục:</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Tên danh mục"
+                        required
+                      />
+                    </div>
+                    <div class="frm-field">
+                      <label for="name">Mô tả danh mục:</label>
+                      <div id="editor">Mô tả danh mục</div>
+                    </div>
+                    <div class="mt-3">
+                      <button type="button" class="btn btn-danger">Huỷ</button>
+                      <button type="submit" class="btn btn-success">Lưu</button>
+                    </div>
+                  </div>
+                  <div class="frm-product-right">
+                    <div class="frm-title"><h4>Hình ảnh</h4></div>
+                    <div class="imageUpload">
+                      <div class="imageUpload-inner">
+                        <div class="imageUpload-icon">
+                          <i class="bi bi-arrow-up-circle-fill"></i>
                         </div>
-                        <div class="frm-product-right">
-                            <div class="frm-title"><h4>Hình ảnh</h4></div>
-                            <div class="imageUpload">
-                                <div class="imageUpload-inner">
-                                    <div class="imageUpload-icon">
-                                        <i class="bi bi-arrow-up-circle-fill"></i>
-                                    </div>
-                                    <button type="button" class="btn-upload">
-                                        Tải lên
-                                    </button>
-                                    <input type="file" id="file">
-                                    <div class="imageUpload-description">
-                                        click để tải hình ảnh lên
-                                    </div>
-                                    <div class="pic-uploaded">
-                                        <img src="" alt="" class="image-uploaded">
-                                    </div>
-                                </div>
-                            </div>
+                        <button type="button" class="btn-upload">
+                          Tải lên
+                        </button>
+                        <input type="file" id="file" />
+                        <div class="imageUpload-description">
+                          click để tải hình ảnh lên
                         </div>
-                    </form>
-                </div>
+                        <div class="pic-uploaded">
+                          <img src="" alt="" class="image-uploaded" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -164,6 +175,5 @@
     <script src="./js/dashboard.js"></script>
     <script src="./js/ckeditor.js"></script>
     <script src="./js/dashboard-edit-category.js"></script>
-    
   </body>
 </html>

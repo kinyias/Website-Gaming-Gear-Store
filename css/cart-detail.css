@@ -155,6 +155,16 @@
   background-color: #000000;
 }
 
+.modal {
+  transform: scale(0);
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.modal.show {
+  transform: scale(1);
+}
+
 @media (max-width: 576px) {
   .media-left {
     flex: 0 0 60px;

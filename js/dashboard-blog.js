@@ -8,6 +8,7 @@ function initDashBoardProduct() {
 }
 function generateBlogsDashBoard() {
   const table_body = document.getElementById('table-body');
+  table_body.innerHTML = ''
   listBlogs.forEach((item) => {
     table_body.innerHTML += `
         <tr>
@@ -29,12 +30,22 @@ function generateBlogsDashBoard() {
                         </div>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-danger">
+                        <button type="button" class="btn btn-danger" onclick="confirmDelete(${
+                          item.id
+                        })">
                           <i class="bi bi-x"></i>
                         </button>
                       </td>
                     </tr>`;
   });
 }
-
+function confirmDelete(id) {
+  const btn_modal = document.getElementById('btnModal');
+  btn_modal.click();
+  const btn_delete = document.getElementById('btn-delete');
+  btn_delete.onclick = function () {
+    listBlogs = listBlogs.filter((item) => item.id != id);
+    generateBlogsDashBoard()
+  };
+}
 initDashBoardProduct();

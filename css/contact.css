@@ -35,4 +35,14 @@
   background-color: #23b55c;
 }
 
+.modal {
+  transform: scale(0);
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.modal.show {
+  transform: scale(1);
+}
+
 /*# sourceMappingURL=contact.css.map */

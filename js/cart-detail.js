@@ -53,7 +53,7 @@ function loadCartDetail() {
       /></a>
          
         </div>
-        <div class="item-remove" onclick="deleteCart(${item.productId})">
+        <div class="item-remove" onclick="confirmDelete(${item.productId})">
         <i class="bi bi-x"></i>
         </div>
       </div>
@@ -93,7 +93,14 @@ function loadCartDetail() {
   });
   summary_total_number.textContent = formatVND(sum);
 }
-
+function confirmDelete(id) {
+  const btn_modal = document.getElementById('btnModal');
+  btn_modal.click();
+  const btn_delete = document.getElementById('btn-delete');
+  btn_delete.onclick = function () {
+    deleteCart(id)
+  };
+}
 function minusQuantity(id) {
   let cart = JSON.parse(localStorage.getItem('cart'));
   if (cart[cart.findIndex((item) => item.productId == id)].quantity > 1)

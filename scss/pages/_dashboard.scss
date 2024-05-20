@@ -26,6 +26,11 @@
     background-color: $primary-color;
   }
 }
+
+.admin-user{
+  cursor: pointer;
+  user-select: none;
+}
 .nav-list {
   .root-nav-item {
     .nav-item-title {
@@ -79,7 +84,7 @@
   margin-top: 70px;
   overflow: hidden;
   &-inner {
-    padding: 30px 300px;
+    padding: 30px 10%;
   }
   .report-sales {
     display: flex;
@@ -159,6 +164,7 @@
   .imageUpload{
     margin: 10px;
     &-inner{
+      height: 300px;
       border: 3px dashed #666;
       border-radius: 8px;
       display: flex;
@@ -242,10 +248,85 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  a{
+    transition: .3s;
+    &:hover{
+      color: $primary-color;
+    }
+  }
 }
 
 .menu-bar {
   display: none;
+}
+.table .modal-dialog{
+  background-color: transparent;
+}
+.modal {
+  transform: scale(0);
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.modal.show {
+  transform: scale(1);
+}
+@media (max-width: $tablet) {
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .admin-navigation {
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: 0.3s;
+  }
+  .admin-navigation.show {
+    transform: translateX(0);
+  }
+  .menu-bar {
+    display: inline-block;
+  }
+  .main-content {
+    margin: 0;
+    margin-top: 90px;
+    &-inner {
+      padding: 0 20px;
+    }
+    .report-sales {
+      flex-direction: column;
+    }
+    .sales-product,
+    .orders-total {
+      width: 100% !important;
+    }
+  }
+  .report-dashboard {
+    flex-direction: column;
+    .report-sales-daily,
+    .report-profit,
+    .report-order-month {
+      width: 100% !important;
+    }
+    .report-profit {
+      margin-bottom: 100px;
+    }
+    .report-title {
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+  .add-product-wrapper{
+    .frm-add-product{
+      flex-direction: column;
+    }
+    .frm-product-left, .frm-product-right{
+      width: 100%!important;
+    }
+    .frm-group-flex{
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 @media (max-width: $mobile) {

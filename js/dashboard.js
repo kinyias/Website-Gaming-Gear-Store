@@ -16,8 +16,14 @@ if(file)
 file.addEventListener('change', updateImageDisplay);
 function updateImageDisplay() {
   const curFiles = file.files;
+  const imageUpload_icon = document.querySelector('.imageUpload-icon')
+  const btn_upload = document.querySelector('.btn-upload')
+  const imageUpload_description = document.querySelector('.imageUpload-description')
   image_uploaded.src = URL.createObjectURL(curFiles[0]);
   image_uploaded.style.opacity = 1;
+  imageUpload_icon.style = 'visibility:hidden;'
+  btn_upload.style = 'visibility:hidden;'
+  imageUpload_description.style = 'visibility:hidden;'
 }
 
 if(image_uploaded)

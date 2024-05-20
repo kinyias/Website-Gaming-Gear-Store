@@ -1,5 +1,3 @@
-
-
 .contact {
   background-color: #f6f6f6;
   &-message {
@@ -24,15 +22,25 @@
       padding: 10px;
       outline: none;
     }
-    .btn-contact{
-        padding: 10px 20px;
-        margin: 10px;
-        color: #fff;
-        background-color: $secondary-color;
-        transition: .3s;
-        &:hover{
-            background-color: $primary-color;
-        }
+    .btn-contact {
+      padding: 10px 20px;
+      margin: 10px;
+      color: #fff;
+      background-color: $secondary-color;
+      transition: 0.3s;
+      &:hover {
+        background-color: $primary-color;
+      }
     }
   }
+}
+
+.modal {
+  transform: scale(0);
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.modal.show {
+  transform: scale(1);
 }

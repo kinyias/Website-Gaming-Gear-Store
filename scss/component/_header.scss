@@ -283,6 +283,7 @@
       &-item {
         position: relative;
         background-color: $primary-color;
+        transition: .3s;
         &:hover{
           filter: brightness(110%)
         }
@@ -293,7 +294,7 @@
           text-transform: uppercase;
           transition: .3s;
           &:hover{
-            color: #000;
+            color: #fafafa;
           }
         }
       }
