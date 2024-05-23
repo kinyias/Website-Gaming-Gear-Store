@@ -1,4 +1,5 @@
 function initProductDetail() {
+  //Fetch dữ liệu từ file json
   fetch('./data/Products.json')
     .then((response) => response.json())
     .then((response) => {
@@ -32,14 +33,19 @@ function toastMessage() {
     });
   });
 }
+/** 
+ * Hàm này dùng để render sản phảm theo id params
+*/
 function generateProductByIdQueryParam() {
+  //get id params
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
   let idProduct = params.id;
-  let product = listProducts.filter((p) => p.id == idProduct)[0];
+  let product = listProducts.filter((p) => p.id == idProduct)[0]; //Lọc ra sản phẩm cần tìm
   const product_detail = document.querySelector('.product-detail');
   const description_content = document.querySelector('.description-content');
+  //render HTML
   product_detail.innerHTML = `<div class="row">
   <div class="col-lg-4 col-12">
     <div class="product-detail-image">
@@ -96,11 +102,18 @@ function generateProductByIdQueryParam() {
   });
 }
 
+/**
+ * Hàm này dùng để render sản phẩm liên quan
+ * @param listProducts 
+ * @param idCategory 
+ * @param idProduct 
+ */
 function generateProductRelateList(listProducts, idCategory, idProduct) {
   const productRelateList = document.querySelector(
     '.product-relate-list .owl-stage-outer .owl-stage'
   );
   if (productRelateList) {
+    //Render sản phẩm cùng danh mục và không phải sp chi tiết hiện tại
     let productsRelate = listProducts.filter(
       (item) => item.category == idCategory && item.id != idProduct
     );
@@ -143,6 +156,7 @@ function generateProductRelateList(listProducts, idCategory, idProduct) {
             </div>
       </div>`;
     });
+    //Owl-carousel
     $(document.querySelector('.product-relate-list')).owlCarousel({
       loop: true,
       margin: 10,
@@ -170,11 +184,17 @@ function generateProductRelateList(listProducts, idCategory, idProduct) {
   }
 }
 
+/**
+ * Hàm này để tắng sô lượng
+ */
 function plusProduct() {
   const quantity_input = document.getElementById('quantity');
   quantity_input.value = Number(quantity_input.value) + 1;
 }
 
+/**
+ * Hàm này để giảm số lượng
+ */
 function minusProduct() {
   const quantity_input = document.getElementById('quantity');
   if (Number(quantity_input.value) > 1)

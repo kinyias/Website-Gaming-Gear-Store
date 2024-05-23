@@ -1,4 +1,5 @@
 function initDashBoardProduct() {
+  //Fetch dữ liệu từ file json
   fetch('./data/Products.json')
     .then((response) => response.json())
     .then((response) => {
@@ -16,6 +17,9 @@ function formatVND(number) {
     .replaceAll('.', ',');
   return formatted_number;
 }
+/**
+ * Hàm này render giao diện dashboard danh sách sản phẩm
+ */
 function generateProductsDashBoard() {
   const table_body = document.getElementById('table-body');
   table_body.innerHTML = ''
@@ -62,10 +66,15 @@ function generateProductsDashBoard() {
   });
 }
 
+/**
+ * Hàm này gọi modal xác nhận trước khi xoá 
+ * @param id 
+ */
 function confirmDelete(id) {
   const btn_modal = document.getElementById('btnModal');
   btn_modal.click();
   const btn_delete = document.getElementById('btn-delete');
+  //Nhấn nút xoá
   btn_delete.onclick = function () {
     listProducts = listProducts.filter((item) => item.id != id);
     generateProductsDashBoard()

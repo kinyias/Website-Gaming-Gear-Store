@@ -20,14 +20,22 @@ function formatVND(number) {
 function getProductById(id) {
   return listProducts.find((item) => item.id == id);
 }
+/**
+ * Xoá sản phẩm khỏi giỏ hàng
+ * @param id 
+ */
 function deleteCart(id) {
-  let cart = JSON.parse(localStorage.getItem('cart'));
-  cart = cart.filter((item) => item.productId != id);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  loadCartDetail();
+  let cart = JSON.parse(localStorage.getItem('cart')); //Lây giỏ hàng từ localStorage
+  cart = cart.filter((item) => item.productId != id); //Lọc bỏ sản phẩm cần xoá khỏi giỏ hàng
+  localStorage.setItem('cart', JSON.stringify(cart)); //Lưu lại giỏ hàng vào localStorage
+  loadCartDetail(); //Render lại giao diện chi tiết giỏ hàng
 }
+/**
+ * Hàm này dùng để render lại giao diện chi tiết giỏ hàng
+ */
 function loadCartDetail() {
   if (!localStorage.getItem('cart')) {
+    //Khởi tạo cart nếu chưa có
     localStorage.setItem('cart', '[]');
   }
   let cart = JSON.parse(localStorage.getItem('cart'));
@@ -42,6 +50,7 @@ function loadCartDetail() {
   const summary_total_number = document.querySelector('.summary-total-number');
   let sum = 0;
   table_cart.innerHTML = '';
+  //Render HTML
   cart.forEach((item) => {
     let product = getProductById(item.productId);
     let newHTML = `<div class="media-line-item line-item">
@@ -93,27 +102,40 @@ function loadCartDetail() {
   });
   summary_total_number.textContent = formatVND(sum);
 }
+/**
+ * Hàm này để xác nhận trước khi xoá khỏi giỏ hàng
+ * @param id 
+ */
 function confirmDelete(id) {
   const btn_modal = document.getElementById('btnModal');
-  btn_modal.click();
-  const btn_delete = document.getElementById('btn-delete');
+  btn_modal.click(); //Thực hiện click button modal để hiện modal của bootstrap
+  const btn_delete = document.getElementById('btn-delete'); //Đây là nút xoá trong modal
   btn_delete.onclick = function () {
-    deleteCart(id)
+    deleteCart(id); //Thực hiện xoá sản phẩm khỏi giỏ hàng
   };
 }
+/**
+ * Hàm này để tăng số lượng sp trong giỏ hàng
+ * @param id
+ */
 function minusQuantity(id) {
-  let cart = JSON.parse(localStorage.getItem('cart'));
+  let cart = JSON.parse(localStorage.getItem('cart')); // Lấy tất cả sp trong giỏ hàng từ localStorage
   if (cart[cart.findIndex((item) => item.productId == id)].quantity > 1)
+    //Tìm sp trong giỏ hàng và -1 nếu >1 vì không có sp nào trong giỏ hàng lại <1
     cart[cart.findIndex((item) => item.productId == id)].quantity -= 1;
   localStorage.setItem('cart', JSON.stringify(cart));
-  loadCartDetail();
+  loadCartDetail(); //Render giao diện lại chi tiết giỏ hàng
 }
 
+/**
+ * Hàm này để giảm số lượng sp trong giỏ hàng
+ * @param id
+ */
 function plusQuantity(id) {
-  let cart = JSON.parse(localStorage.getItem('cart'));
-  cart[cart.findIndex((item) => item.productId == id)].quantity += 1;
+  let cart = JSON.parse(localStorage.getItem('cart'));// Lấy tất cả sp trong giỏ hàng từ localStorage
+  cart[cart.findIndex((item) => item.productId == id)].quantity += 1; //Tìm sp trong giỏ hàng và +1
   localStorage.setItem('cart', JSON.stringify(cart));
-  loadCartDetail();
+  loadCartDetail(); //Render giao diện lại chi tiết giỏ hàng
 }
 
 initCartDetail();
