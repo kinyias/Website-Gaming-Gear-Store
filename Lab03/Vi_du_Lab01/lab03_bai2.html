@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@600&family=Kanit&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="path/to/fork-awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+
+    <div id="container">
+
+        <!-- Hình Banner hoặc Logo  -->
+        <div id="header">
+            <div id="banner_logo">
+                <a href="#"> <img src="images/bookstoreBanner.jpg"  alt="" style="border-radius: 10px;" width="1000px" height="300px" ></a>
+            </div>
+        </div>
+
+        <!-- MENU CHÍNH  -->
+        <div id="menu">
+            <div id="menu_left_corner"></div>
+
+            <div id="menu_content">
+                <ul id="hmenu">
+                    <li>
+                        <a href="#"><img src="images/layout/home.png" /> TRANG CHỦ</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="#"><img src="images/layout/services.png" /> DỊCH VỤ</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="#"><img src="images/layout/favs.png" /> TIN KHUYẾN MÃI</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="#"><img src="images/layout/car.png" /> GIAO HÀNG</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="../Vi_du/index.html" target="login"><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="menu_right_corner"></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="path"></div>
+        <div id="main">
+
+            <!-- MENU bên trái -->
+            <div id="left">
+                <div class="title">Loại sản phẩm</div>
+                <ul class="categories">
+
+                    <li class="lmenu1">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Văn Học</a>
+                    </li>
+                    <li class="lmenu2">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Kinh Tế</a>
+                    </li>
+                    <li class="lmenu1">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Tâm Lý</a>
+                    </li>
+                    <li class="lmenu2">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiếu Nhi</a>
+                    </li>
+                    <li class="lmenu1">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Giáo Khoa</a>
+                    </li>
+                    <li class="lmenu2">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ngoại Ngữ</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- CONTENT hiển thị ở giữa  -->
+            <div id="content" style="background-color: hsl(0deg 19.05% 91.76%);">
+                <form name="frmdangkithanhvien" action="xlThem.php" method="post" enctype="multipart/form-data">
+                    <table border="0" width="100%" style="margin-top: 20px;">
+                    <tr>
+                    <td style="font-weight: bold;" colspan="2" align="center"><em>ĐĂNG KÝ THÀNH VIÊN</em></td></tr>
+                    
+                    
+                    <tr><td>Tên đăng nhập</td>
+                       <td><input type="text" name="nmUsername" size="30"/></td>
+                    </tr>
+                    <tr><td>Mật khẩu</td>
+                       <td><input type="password" name="nmPassword" size="30"/></td>
+                    </tr>
+                    <tr><td colspan="2"><hr /></td></tr>
+                    <tr><td colspan="2"><b>THÔNG TIN CÁ NHÂN</b></td></tr> 	
+                    
+                    <tr><td>Họ tên</td>
+                       <td><input type="text" name="nmFullName" size="50"/></td>
+                    </tr>
+                    <tr><td>Ngày sinh</td>
+                       <td><input type="date" name="nmBirthDate"  /></td>
+                    </tr>
+                    <tr><td>Giới tính</td>
+                        <td>
+                            <input type="radio" name="nmGioiTinh" id="idNam" checked> Nam <br>
+                            <input type="radio" name="nmGioiTinh" id="idNu"> Nữ 
+                        </td>
+                     </tr>
+                    <tr><td>Địa chỉ email</td>
+                      <td><input type="email" name="nmEmailAdd" size="50" /></td>
+                    </tr>
+                    <tr><td>Hình đại diện</td>
+                      <td><input type="file" name="nmURLAvatar" /></td>
+                    </tr>
+                    <tr><td>Địa chỉ</td>	
+                      <td><input type="text" name="nmAddress" size="50"/></td>
+                    </tr>
+                    <tr><td>Điện thoại</td>
+                       <td><input type="tel" name="nmCellphone" size="50"/></td>
+                    </tr>
+                    <tr><td>Câu hỏi bí mật</td>
+                        <td><select name="nmPriateQuestion">
+                            <option value="">Chọn câu hỏi bí mật</option>
+                            <option value="firstschool">Ngôi trường đầu tiên của bạn là gì</option>
+                            <option value="firstpet">Con vật đầu tiên mà bạn nuôi tên gì</option>
+                            <option value="childhoodmemory">Kỉ niệm thời thơ ấu của bạn là gì</option>
+                            <option value="hometown">Quê bạn ở đâu</option>
+                            <option value="hometown">Tên người bạn thân nhất của bạn là gì</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr><td>Trả lời</td>
+                    <td><input type="text" name="nmPrivateAnswer" size="50"/></td>
+                    </tr>
+                    <td>Bạn đang quan tâm đến nhóm sản phẩm nào?</td>
+                    <td>
+                        <table style="width: 100%;">
+                            <tr>
+                                <td colspan="1">
+                                    <input type="checkbox" name="nmFields[]"/> Văn học <br>
+                                    <input type="checkbox" name="nmFields[]"/> Kinh tế <br>
+                                    <input type="checkbox" name="nmFields[]"/> Tâm lý<br>
+                                </td>
+                                <td colspan="1">
+                                    <input type="checkbox" name="nmFields[]"/> Thiếu nhi<br>
+                                    <input type="checkbox" name="nmFields[]"/> Giáo khoa<br>
+                                    <input type="checkbox" name="nmFields[]"/> Ngoại ngữ<br>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br/><input type="submit" name="nmSubmit" value="Đăng ký" /> 
+                        <input type="reset" name="nmReset" value="Xóa" /> </td>
+                    </tr>
+                    </table> 
+                </form>
+            </div>
+            
+            <!-- MENU bên phải  -->
+            <div id="right">
+                <!-- Cần bổ sung thêm (tương tự như <div id="left"> ) -->
+                </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

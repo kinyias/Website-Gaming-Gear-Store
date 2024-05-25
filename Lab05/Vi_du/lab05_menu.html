@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab05_menu</title>
+    <style>
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .menu-1{
+            background-color: aqua;
+            display: inline-block;
+        }
+        .menu-1 ul{
+            display: flex;
+        }
+        .menu-1 ul li a{
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+        .menu-1 ul li a:hover{
+            color: #fff;
+            background-color: coral;
+        }
+        .menu-2{
+            margin-top: 10px;
+            background-color: cornflowerblue;
+            width: 200px;
+        }
+        .menu-2 li{
+            border-bottom: 1px solid #fff;
+        }
+        .menu-2 li a{
+            padding: 10px;
+            background-color: cornflowerblue;
+            display: block;
+        }
+        .menu-2 li a:hover{
+            filter: brightness(120%);
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu-1">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu-2">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

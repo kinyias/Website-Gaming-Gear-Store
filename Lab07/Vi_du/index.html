@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nice | BookStore</title>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito Sans:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px; 
+            margin-top: 5px; 
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">Mặt hàng: <span>1.000.000 đ</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <div>Việt Nam</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li><a href="./index.html">Trang chủ</a></li>
+                <li><a href="./shop-grid.html">Cửa hàng</a></li>
+                <li><a href="#">Trang</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Cửa hàng chi tiết</a></li>
+                        <li><a href="./shoping-cart.html">Giỏ hàng</a></li>
+                        <li><a href="./checkout.html">Thủ tục thanh toán</a></li>
+                        <li><a href="./blog-details.html">Chi tiết bài viết</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">Bài viết</a></li>
+                <li><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> hello@bookstore.com</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> hello@bookstore.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__language">
+                                <div>Việt Nam</div>
+                                <span class="arrow_carrot-down"></span>
+                                <ul>
+                                    <li><a href="#">Spanis</a></li>
+                                    <li><a href="#">English</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul class="ul-menu">
+                            <li><a href="./index.html">Trang chủ</a></li>
+                            <li><a href="./shop-grid.html">Cửa hàng</a></li>
+                            <li><a href="#">Trang</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">Cửa hàng chi tiết</a></li>
+                                    <li><a href="./shoping-cart.html">Giỏ hàng</a></li>
+                                    <li><a href="./checkout.html">Thủ tục thanh toán</a></li>
+                                    <li><a href="./blog-details.html">Chi tiết bài viết</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./blog.html">Bài viết</a></li>
+                            <li><a href="./contact.html">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        </ul>
+                        <div class="header__cart__price">Mặt hàng: <span>1.000.000 đ</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>Sản Phẩm</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Văn học</a></li>
+                            <li><a href="#">Kinh tế</a></li>
+                            <li><a href="#">Thiếu nhi</a></li>
+                            <li><a href="#">Kĩ năng sống</a></li>
+                            <li><a href="#">Giáo khoa</a></li>
+                            <li><a href="#">Từ điển</a></li>
+                            <li><a href="#">Lịch sử</a></li>
+                            <li><a href="#">Y học</a></li>
+                            <li><a href="#">Tạp chí</a></li>
+                            <li><a href="#">Ngoại ngữ</a></li>
+                            <li><a href="#">Giáo trình</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    Lọc danh mục
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" placeholder="Bạn cần gì?">
+                                <button type="submit" class="site-btn">TÌM KIẾM</button>
+                            </form>
+                        </div>
+                        <div class="hero__search__phone">
+                            <div class="hero__search__phone__icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="hero__search__phone__text">
+                                <h5>0901234567</h5>
+                                <span>Hỗ trợ 24/7 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+     <!-- Checkout Section Begin -->
+     <section class="checkout spad">
+        <div class="container">
+            <div class="checkout__form">
+                <h4>Thông tin thanh toán</h4>
+                <form id="checkoutForm" action="#">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Tên<span>*</span></p>
+                                        <input type="text" id="firstNameInput">
+                                        <div class="error-message" id="firstNameErrorMessage"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Họ<span>*</span></p>
+                                        <input type="text" id="lastNameInput">
+                                        <div class="error-message" id="lastNameErrorMessage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Quốc gia<span>*</span></p>
+                                <input type="text" id="nationInput">
+                                <div class="error-message" id="nationErrorMessage"></div>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Địa chỉ<span>*</span></p>
+                                <input type="text" placeholder="Địa chỉ thường trú" class="checkout__input__add" id="adresseInput">
+                                <div class="error-message" id="adresseErrorMessage"></div>
+                                <input type="text" placeholder="Căn hộ, suite, unite ect (tùy chọn)" id="suiteInput">
+                                <div class="error-message" id="suiteErrorMessage"></div>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Quê quán<span>*</span></p>
+                                <input type="text" id="countryInput">
+                                <div class="error-message" id="countryErrorMessage"></div>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Mã bưu / ZIP<span>*</span></p>
+                                <input type="text" id="zipInput">
+                                <div class="error-message" id="zipErrorMessage"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Điện thoại<span>*</span></p>
+                                        <input type="text" id="numInput">
+                                        <div class="error-message" id="numErrorMessage"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Email<span>*</span></p>
+                                        <input type="text" id="emailInput">
+                                        <div class="error-message" id="emailErrorMessage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="checkout__input__checkbox">
+                                <label for="diff-acc">
+                                    Gửi đến một địa chỉ khác?
+                                    <input type="checkbox" id="diff-acc">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Ghi chú hóa đơn<span>*</span></p>
+                                <input type="text" placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: ghi chú đặc biệt để giao hàng." id="noteInput">
+                                <div class="error-message" id="noteErrorMessage"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="checkout__order">
+                                <h4>Hóa đơn của bạn</h4>
+                                <div class="checkout__order__products">Sản phẩm <span>Giá</span></div>
+                               
+                                <div class="checkout__order__subtotal">Tổng phụ <span>0 đ</span></div>
+                                <div class="checkout__order__total">Tổng hóa đơn <span>0 đ</span></div>
+                                <p>Đọc sách là một điều rất tốt cho cuộc sống của bạn, hãy luôn đặt mình vào hoàn cảnh nào đó, bạn sẽ
+                                    nhận ra cuộc sống này rất thú vị.
+                                </p>
+                                <div class="checkout__input__checkbox">
+                                    <label for="paypal">
+                                        Paypal
+                                        <input type="checkbox" id="paypal" onclick="validateCheckBox()">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <button type="button" class="site-btn" onclick="validateForm()">Đặt hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Checkout Section End -->
+
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: 180 Cao Lỗ Phường 4 Quận 8 Tp.HCM</li>
+                            <li>Phone: 0901234567</li>
+                            <li>Email: hello@BookStore.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>
+                            Yêu cầu hỗ trợ</h6>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Về cửa hàng chúng tôi</a></li>
+                            <li><a href="#">Mua sắm an toàn</a></li>
+                            <li><a href="#">Thông tin giao dịch</a></li>
+                            <li><a href="#">Bảo mật</a></li>
+                            <li><a href="#">Hồ sơ trang web</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Chúng tôi là ai?</a></li>
+                            <li><a href="#">Dịch vụ của chúng tôi</a></li>
+                            <li><a href="#">Dự án</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Sự thay đổi</a></li>
+                            <li><a href="#">Lời cảm ơn</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6>Trở thành thànnh viên của chúng tôi ngay bây giờ</h6>
+                        <p>Nhận thông tin cập nhật qua E-mail về cửa hàng mới nhất của chúng tôi và các ưu đãi đặc biệt.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Enter your mail">
+                            <button type="submit" class="site-btn">Đăng ký</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text"><p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | With <i class="fa fa-heart" aria-hidden="true"></i> by BookStore</a>
+  </p></div>
+                        <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+`
+    <!-- JavaScript -->
+    <script>
+        function validateForm() {
+            
+            var firstName = firstNameInput.value.trim();
+            var email = emailInput.value.trim();
+            var lastName = lastNameInput.value.trim();
+            var nation = nationInput.value.trim();
+            var adresse = adresseInput.value.trim();
+            var suite = suiteInput.value.trim();
+            var country = countryInput.value.trim();
+            var num = numInput.value.trim();
+            var note = noteInput.value.trim()
+            var zip = zipInput.value.trim();
+
+            var isValid = true;
+
+            if (firstName === '') {
+                firstNameErrorMessage.textContent = 'Vui lòng nhập tên của bạn.';
+                isValid = false;
+            } else {
+                firstNameErrorMessage.textContent = '';
+            }
+
+            if (lastName === '') {
+                lastNameErrorMessage.textContent = 'Vui lòng nhập họ của bạn.';
+                isValid = false;
+            } else {
+                lastNameErrorMessage.textContent = '';
+            }
+            if (nation === '') {
+                nationErrorMessage.textContent = 'Vui lòng nhập quốc gia của bạn.';
+                isValid = false;
+            } else {
+                nationErrorMessage.textContent = '';
+            }
+            if (adresse === '') {
+                adresseErrorMessage.textContent = 'Vui lòng nhập địa chỉ của bạn.';
+                isValid = false;
+            } else {
+                adresseErrorMessage.textContent = '';
+            }
+            if (country === '') {
+                countryErrorMessage.textContent = 'Vui lòng nhập quê quán của bạn.';
+                isValid = false;
+            } else {
+                countryErrorMessage.textContent = '';
+            }
+            if (suite === '') {
+                suiteErrorMessage.textContent = 'Vui lòng nhập nơi ở của bạn.';
+                isValid = false;
+            } else {
+                suiteErrorMessage.textContent = '';
+            }
+            if (num === '') {
+                numErrorMessage.textContent = 'Vui lòng nhập số điện thoại của bạn.';
+                isValid = false;
+            } else {
+                numErrorMessage.textContent = '';
+            }
+            if (note === '') {
+                noteErrorMessage.textContent = 'Vui lòng nhập ghi chú của bạn.';
+                isValid = false;
+            } else {
+                noteErrorMessage.textContent = '';
+            }
+            if (zip === '') {
+                zipErrorMessage.textContent = 'Vui lòng nhập mã bưu của bạn.';
+                isValid = false;
+            } else {
+                zipErrorMessage.textContent = '';
+            }
+
+            if (!validateEmail(emailInput.value)) {
+                emailErrorMessage.textContent = 'Vui lòng nhập một địa chỉ email hợp lệ.';
+                isValid = false;
+            } else {
+                emailErrorMessage.textContent = '';
+            }
+            
+            if (isValid) {
+                alert('Đặt hàng thành công!');
+            }
+
+        }
+    
+        function validateEmail(email) {
+            var emailRegex = /\S+@\S+\.\S+/;
+            return emailRegex.test(email);
+        }
+        
+
+        function validateCheckBox(){
+            const paymentCheckBox = document.getElementById('paypal')
+            if(paymentCheckBox.checked){
+                alert('Bạn đã chọn thanh toán payment')
+            }
+            else{
+                alert('Bạn đã bỏ chọn thanh toán payment')
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

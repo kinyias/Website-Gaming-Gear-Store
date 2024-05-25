@@ -1,0 +1,79 @@
+.wrapper {
+	display: flex;
+	/* kich hoat flex box*/
+	flex-flow: row wrap;
+	font-weight: bold;
+	text-align: center;
+}
+
+.wrapper>* {
+	padding: 10px;
+	flex: 1 100%;
+	/* cho tất cả phần tử bên trong có độ dài 100% và tỉ lệ chiếm không gian trống là như nhau*/
+}
+
+.header-flex-2 {
+	background: tomato;
+}
+
+.footer-flex-2 {
+	background: lightgreen;
+	order: 4;
+}
+
+.main {
+	text-align: left;
+	background: deepskyblue;
+	flex: 3 0px;
+	/* cho phần nội dung main ở giữa chiếm 3 phần không gian trống so với 2 phần aside bên cạnh */
+	order: 2;
+}
+
+.aside {
+	flex: 1 0 0 ;
+}
+
+/* 2 phần aside sẽ chỉ chiếm 1 phần không gian */
+.aside-1 {
+	background: gold;
+	order: 1;
+}
+
+.aside-2 {
+	background: hotpink;
+	order: 3;
+}
+
+.container-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+}
+
+@media (max-width: 1200px) {
+	.main{
+		order: 1;
+		flex: 1 100%
+	}
+}
+
+@media (max-width: 600px) {
+	body{
+		font-size: 20px;
+	}
+	.wrapper{
+		flex-direction: column;
+	}
+	.main{
+		order: 1;
+	}
+	.aside-1{
+		order: 2;
+	}
+}
+
