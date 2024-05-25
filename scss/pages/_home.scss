@@ -333,6 +333,18 @@
     }
   }
 }
+
+.list-feature{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  color: #666;
+  a{
+    font-weight: 500;
+    color: $primary-color;
+  }
+}
 @media (max-width: $tablet) {
   .full-sm {
     padding: 0;
